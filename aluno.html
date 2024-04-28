@@ -1,0 +1,76 @@
+<!--Aula 13: Image Map, Elemento Picture, Classes e ID HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+</head>
+<body>
+    <h3>Recordando o atributo de estilos</h3>
+    <div style="background-color: brown;">
+        <p>Podemos aplicar o estilo em diferentes partes do documento</p>
+        <br>
+        <br>
+        <p>Como é um atributo, pode acompanhar a <b>tag</b> na qual está presente e aplicar o estilo.</p>
+    </div>
+    <h1>HTML Classes</h1>
+    <style>
+        .cidade {
+            background-color: coral;
+            color: darkblue;
+            border: darkred;
+            margin: 15px;
+            padding: 20px;
+        }
+        .cidade2 {
+            background-color: rgb(144, 80, 255);
+            color: rgb(224, 226, 220);
+            border: darkred;
+            margin: 15px;
+            padding: 20px;
+        }
+        #idCabecalho {
+            background-color: deepskyblue;
+            color: indigo;
+            border: mediumblue;
+            margin: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+        #idRodape {
+            background-color: indigo;
+            color: deepskyblue;
+            border: mediumblue;
+            margin: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+
+    <div class="cidade">
+        <h2>São Paulo</h2>
+        <p>É a terra da garoa.</p>
+    </div>
+
+    <div class="cidade">
+        <h2>Rio de Janeiro.</h2>
+        <p>É a cidade maravilhosa.</p>
+    </div>
+
+    <div class="cidade2">
+        <h2>Belo Horizonte</h2>
+        <p>É realmente bela.</p>
+    </div>
+    <h3 id="idCabecalho">Cabeçalho padrão do meu documento.</h3>
+    <h2 id="idCabecalho">Cabeçalho dois.</h2>
+
+    <h3 id="idRodape">Rodapé da página</h3>
+
+    <hr>
+    <img src="Images/vasos.png" alt="Flores no vaso" usemap="#floresmap">
+    <map name="floresmap">
+        <area shape="rect" coords="0,0,100,100" href="https://www.w3schools.com/" alt="flores" target="_blank">
+    </map>
+</body>
+</html>

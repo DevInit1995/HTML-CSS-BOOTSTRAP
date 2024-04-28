@@ -1,0 +1,9 @@
+p {
+    background-color: purple;
+    text-indent: 2.5em;
+}
+
+h2 p {
+    text-align: center;
+    background-color: yellow;
+}

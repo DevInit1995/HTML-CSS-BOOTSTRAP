@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio</title>
+    <!--18 | Criando camadas de estilo com HTML e CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <h1>Bio</h1>
+    </div>
+
+    <!--19 | Trabalhando com vídeos no seu projeto HTML e CSS.-->
+    <div class="wrapper-video">
+      <h2>[A] Um vídeo da sua pasta de trabalho.</h2>
+
+      <video controls poster="Imagens/Miniatura.png">
+        <source src="Videos/ponte.mp4.mp4" type="video/mp4" />
+        O seu navegador não suporta esse formato de vídeo!
+        <!--aqui podemos incluir outros sources com diferentes formatos-->
+      </video>
+
+      <br /><br />
+
+      <h3>[B] Incorporando um vídeo online.</h3>
+
+        <iframe
+          src="https://www.youtube.com/embed/watch?v=0SsXKMpqi1w&list=RD0SsXKMpqi1w&start_radio=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <h3>[C] Outra forma de incorporação de Vídeo</h3>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/SWZvus6-6Yo?si=fqUUz3svXlBzUoK9"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <br /><br />
+    </div>
+  </body>
+</html>

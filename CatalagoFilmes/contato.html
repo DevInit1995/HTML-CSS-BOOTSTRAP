@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link
+      rel="stylesheet"
+      href="/CatalagoFilmes/SessaoTerrorSinopse/style.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/CatalagoFilmes/SessaoTerrorSinopse/pratica.html"
+            >Página inicial</a
+          >
+        </li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <br />
+
+    <h1>
+      <i class="titulo">Contato</i>
+    </h1>
+
+    <!--Aula 20 Forms-->
+    <form>
+      <div>
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Digite o seu e-mail."
+        />
+      </div>
+
+      <!--
+      <div>
+        <label for="email">E-mail com valor padrão</label>
+        <input type="email" name="email" id="email" value="exemple@gmail.com" />
+      </div>-->
+
+      <div>
+        <label for="uf">Unidade da Federação</label>
+        <input type="radio" name="uf" value="SP" /> SP
+        <input type="radio" name="uf" value="MG" /> MG
+        <input type="radio" name="uf" value="RJ" /> RJ
+        <input type="radio" name="uf" value="ES" /> ES
+      </div>
+
+      <div>
+        <label>Informe onde comprou o pruduto</label>
+        <input type="checkbox" id="online" name="online" value="Loja Online" />
+        <label for="online">Loja Online</label>
+        <input type="checkbox" id="fisica" name="fisica" value="Loja Física" />
+        <label for="fisica">Loja Física</label>
+        <input
+          type="checkbox"
+          id="revendedor"
+          name="revendedor"
+          value="Revendedor"
+        />
+        <label for="revendedor">Revendedor</label>
+      </div>
+
+      <div>
+        <textarea
+          name="mesagem"
+          cols="70"
+          rows="10"
+          placeholder="
+        Escreva a sua mensagem!"
+          required
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="password">Informe a senha</label>
+        <input type="password" name="password" placeholder="Informe a senha" />
+      </div>
+
+      <div>
+        <label for="tipo">Tipo de Mensagem</label>
+        <select name="tipo" id="tipo" required>
+          <option selected disabled value="">Selecione</option>
+          <option value="sugestao">Sugestão</option>
+          <option value="critica">Crítica</option>
+          <option value="elogio">Elogio</option>
+        </select>
+      </div>
+
+      <button type="submit" name="submit">Enviar</button>
+    </form>
+  </body>
+</html>

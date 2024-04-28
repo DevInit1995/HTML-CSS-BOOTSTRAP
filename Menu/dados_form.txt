@@ -1,0 +1,1 @@
+http://127.0.0.1:5500/Menu/destino.html?email=kennedyalves871%40gmail.com&email=jhonkennedysantos%40auge.com.br&uf=MG&revendedor=Revendedor&mesagem=Teste&password=pabloescobar&tipo=sugestao&arquivo=teste.PNG&submit=

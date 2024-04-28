@@ -1,0 +1,47 @@
+/*Aula 16 | Criando camadas de estilo.*/
+h1 {
+    color: rgba(221, 228, 23, 0.985);
+    font-size: 30px;
+    margin: 0px;
+    background-color: rgb(129, 29, 29);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img {
+    width: 950px;
+    height: 600px;
+}
+
+ul{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ol{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+h3  {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+table{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+

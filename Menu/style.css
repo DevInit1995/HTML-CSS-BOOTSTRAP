@@ -1,0 +1,170 @@
+/*<!--18 | Criando camadas de estilo com HTML e CSS-->*/
+body {
+  background-color: #eee;
+}
+
+.iframe {
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+
+/*.wrapper-intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 20px;
+    padding: 70px 70px 20px;
+    //top 30px left side 20px from the bottom
+    text-indent: 0px;
+}*/
+
+.wrapper-video {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+video {
+  width: 56%;
+  height: 315px;
+}
+
+.wrapper-video iframe {
+  width: 56%;
+  height: 315px;
+}
+
+/* Aula 20 Forms */
+/* refere-se ao form */
+form {
+  position: relative;
+  width: 740px;
+  height: 800px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1em;
+  box-sizing: border-box;
+  background: #fff url(background.jpg);
+}
+
+textarea {
+  margin-top: 1em;
+  resize: vertical;
+  max-height: 200px;
+}
+
+input,
+textarea {
+  outline: none;
+  border: 1px, solid rgb(245, 249, 250);
+  line-height: 40px;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  border: 1px solid rgba(255, 0, 0);
+}
+
+form div {
+  margin-top: 1em;
+}
+
+.wrapper {
+  margin: 0 0 auto 0;
+  /*top right bottom left side*/
+  width: auto;
+  /*Tamanho da área de conteúdo*/
+  background-color: darkgray;
+  text-align: center;
+}
+
+ul {
+  margin-left: 60px;
+}
+
+ul li {
+  list-style: none;
+  /*para suprimir os bullets da lista*/
+  display: inline-block;
+  /*apresenta as opções da lista na mesma linha*/
+  float: left;
+  /*define a altura da linha com 100px, como está definido o NAV BAR*/
+}
+
+ul li a {
+  text-decoration: none;
+  /*para suprimir o underline do link*/
+  font-size: 16px;
+  /*define os itens do menu com fonte tamanho 14px*/
+  font-family: Arial, Helvetica, sans-serif;
+  /*define a fonte que será utilizada no menu*/
+  color: #1e1e1e;
+  /*define a cor da fonte para as palavras do menu*/
+  padding: 0 20px;
+  /*0 px top e botton e 20px (centralizado na barra de 
+    navegação e 20 px a direita e á esquerda na barra de navegação*/
+  display: block;
+  /*habilita o link em na vertical do bloco*/
+  letter-spacing: 2px;
+  /*Escopo entre as letras*/
+  font-weight: 400;
+  /*Intensidade da fonte*/
+}
+
+ul li a:hover {
+  color: #f11010;
+  /*muda a cor a depender da posição do mouse*/
+}
+
+/* Aula 21 Forms-PT.2  */
+/* Complemento do style.css para o FORMS */
+#email {
+  width: 100%;
+}
+
+#password {
+  width: 50%;
+}
+
+input[type="password"] {
+  background-color: #f11010;
+  color: antiquewhite;
+}
+
+#tipo {
+  width: 50%;
+  padding: 12px 18px;
+}
+
+input[type="email"] {
+  background-color: rbb(202, 201, 201);
+  color: white;
+}
+
+fieldset {
+  position: relative;
+  margin-top: 1em;
+  background-color: aquamarine;
+}
+
+legend {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  color: #fff;
+}
+
+button {
+  margin-top: 1em;
+}

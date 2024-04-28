@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Desafio 21 Dias</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // Alert e prompt(Leia, escreva)
+      /*a = parseInt(prompt("Digite o 1 número"));
+            b = parseInt(prompt("Digite o 2 número"));
+            alert("O resultado da operação foi: " +  (a + b));-*/
+
+      /*
+            valorBrutoAnual = parseInt(prompt("Digite valor bruto anual."));
+            valorDividasAnual = parseInt(prompt("Digite o valor total das dividas anuais."));
+
+            resultado = (valorBrutoAnual - valorDividasAnual);
+
+            alert("O resultado mensal foi: " + (resultado / 12));*/
+
+      /*
+            let quantidade = parseFloat(prompt("Quantidade de laranjas: "));
+            let result = quantidade * 0.30;
+
+            alert("O resultado total é: " + (result));*/
+
+      /*
+            //Estrutura condicional if-else
+            let horario = prompt("Digite o horário que você acordou: ");
+            recebe = Date("11/03/2020 " + horario) >= new Date("11/03/2020 05:00") && new Date("11/03/2020 " + horario) <= new Date("11/03/2020 05:59");
+
+            if (recebe){
+                alert("Parabéns você está acordado");
+            }
+            else if(horario == "05:01"){
+                alert("Parabéns você está acordado 2");
+            }
+            else {
+                alert("Infelismente você perdeu esta aula");
+            }
+
+             horario = new Date("11/03/2020 05:02");
+             alert(recebe);*/
+
+      /*
+
+            //comparação de datas
+            var date1 = new Date('2020-10-23');
+            var date2 = new Date('2020-10-22');
+
+            alert(date1 > date2);
+            alert(date1 >= date2);
+            alert(date1 < date2);
+            alert(date1 <= date2);
+            */
+
+      /*
+            let date1 = new Date();
+            let date2 = new Date(date1);
+
+            alert(date1 == date2);
+            alert(date1 === date2);
+            alert(date1 != date2);
+            alert(date1 !== date2);*/
+
+      //Comparação de duas datas com o método getTime()
+      /*Convertemos duas datas em valores numéricos correspondentes ao seu tempo,
+            utilizando o método getTime(), e então podemos comparar duas delas diretamente.*/
+      /*let date1 = new Date(2019, 8, 7, 11, 45, 55);
+            let date2 = new Date(2019, 8, 3, 11, 45, 55);
+
+            if (date1.getTime() < date2.getTime()){
+                document.write('date1 is lesser than date2');
+            }
+            else if (date1.getTime() > date2.getTime()){
+                document.write('date1 is greater than date2');
+            }
+            else {
+                document.write('both are equal');
+            }
+            */
+      /*
+            // O método getTime() poderia verificar a igualdade de duas datas em JavaScript
+            let date1 = new Date();
+            let date2 = new Date(date1);
+
+            if(date1.getTime() == date2.getTime()) alert('Two dates are equal.');
+
+            if(date1.getDate() === date2.getTime()) alert('Two dates are equal.');
+            */
+
+      // Comparar duas datas com o método valueOf()
+      /*O método valorOf() do objeto Date funciona de forma semelhante ao método getTime()do tempo.
+             Ele converte o objeto Date em valor numérico.*/
+
+      /*
+             let date1 = new Date(2019, 8, 7, 11, 45, 55);
+             let date2 = new Date(2019, 8, 7, 11, 45, 55);
+
+             if (date1.valueOf() < date2.valueOf()){
+                alert('date1 is lesser than date2');
+             }
+             else if (date1.valueOf() > date2.valueOf()){
+                alert('date1 is greater than date2');
+             }
+             else if (date1.valueOf() === date2.valueOf()){
+                alert('both are equal');
+             }
+             alert(date1.valueOf() === date2.valueOf());
+             */
+
+      //Comparar duas datas com a função Number()
+      /*A função Number() converte o objeto Date para um número que representa o valor do objeto em Java.
+             Ela retorna NaN se o objeto não puder ser convertido para um número legal.*/
+
+      /*
+             let date1 = new Date(2019, 8, 7, 11, 45, 55);
+             let date2 = new Date(2019, 8, 7, 11, 45, 55);
+
+             alert(Number(date1) === Number(date2));
+             alert(Number(date1) == Number(date2));
+             alert(Number(date1) < Number(date2));
+             alert(Number(date1) > Number(date2));*/
+
+      // Compara duas datas com o operador unário plus +
+      /*Um operador unário pega um único argumento e opera com base neste argumento ou operando.
+             O JavaScript tem muitos operadores unários. Aqui utilizamos o operador unário mais +,
+             que tenta converter o argumento em um número.*/
+      /* let date1 = new Date(2019, 8, 7, 11, 45, 55);
+             let date2 = new Date(2019, 8, 7, 11, 45, 55);
+
+             alert(+date1 === +date2);
+             alert(+date1 == +date2);
+             alert(+date1 < +date2);
+             alert(+date1 > +date2);*/
+
+      /*
+             var agua = 40;
+             var luz = 50;
+             var internet = 80;
+             var cursos = 97;
+             var mercado = 800;
+             var aluguel = 1200;
+
+             var salarioQuinze = parseFloat(prompt("Digite o valor do seu salário dia 15: "));
+             var salarioTrinta = parseFloat(prompt("Digite o valor do seu Salário dia 30"));
+
+             let despesas = (agua + luz + internet + cursos + mercado + aluguel);
+
+             let salarioTotal = (salarioQuinze + salarioTrinta);
+
+             let calculo = (salarioTotal - despesas);
+
+             let investimento = (calculo * 30) / 100;
+
+             let sobra = calculo - investimento;
+
+             if (calculo < 0) {
+                alert("Infelismente não sobrou dinheiro, é preciso investir em sua educação.");
+             }
+             else{
+                alert("Parabéns, vamos investir " + investimento + " e sobrou " + sobra + " vamos para a diversão." );
+             }
+             */
+
+      /* Estrutura condicional Switch Case aula 5
+            a = 1;
+            b = 2;
+
+           switch(a){
+                case 1:
+                    alert(1)
+                    break
+                case 2:
+                    alert(2);
+                    break
+                case 3:
+                    alert(3);
+                    break
+                default:
+                    console.log("Nenhuma das opções");
+           }*/
+
+      /*Faça um programa que solicite o nome de três clientes
+           apos solicitar o programa três valores que poderam ser números
+           quebrados apos capiturar nos numeros que serão do cliente 1 do cl-2, cli-3
+           logo após de capturar os números e mostra a opção se o valor for maior que 100,
+           mostrar parabéns a media de vocês e maior que 100, se foi menor que 50, muito bem você
+           esta a media vamos melhorar, se deu abaixo de 50 ate 20, "e você precisa realmente você
+           precisa melhorar se o valor deu abaixo de 20, a msg" pessoal e isso e que realmente quer,
+           pessoal e isso que realmente você quer"
+           */
+
+      //array de clientes
+      /*valor_clientes = [];
+           qtd_cliente = parseInt(prompt("Digite a QNTD de clientes: "));
+           document.write("<hr> A quantidade de participantes nesta pesquisa: " + qtd_cliente + "<br");
+
+           do {
+            // loop com a qntd de clientes
+            for(nun = 0; nun < qtd_cliente; nun++){
+                cli = prompt("Informe o nome do 1 cliente: " + (nun + 1));
+                sexo = prompt("Digite o seu sexo \nM para masculino\nF para feminino");
+                s_sexo = (sexo.trim().toUpperCase() == "M" ? "M" : "F");
+                sexo_mostra = (s_sexo == "M" ? "do" : "da");
+
+                avaliacao = {};
+                avaliacao.nota_cliente1;
+                avaliacao.nota_cliente2;
+
+                avaliacao.nota_cliente1 = Number(prompt("Digite a 1° nota: " + sexo_mostra + " " + cli));
+                avaliacao.nota_cliente2 = Number(prompt("Digita a 2° nota: " + sexo_mostra + " " + cli));
+
+                // inserindo dados no final do array com o push, apos capturar os dados informado acima
+                valor_clientes.push(avaliacao.nota_cliente1);
+                valor_clientes.push(avaliacao.nota_cliente2);
+
+            }
+
+            // calculo da média para o loop
+            media = 0;
+            for(i = 0; i < valor_clientes.length; i++){
+                media += valor_clientes[i];
+                // ou media = media + valor[i];
+            }
+            media = media / valor_clientes.length;
+            document.write("<br>" + "A média dos participantes foi: " + media + "</br>");
+
+          if (media >= 100){
+            document.write("<br>" + "Parabéns a média de vocês é maior que 100" + "</br>");
+          }
+          else if(media >= 50 && media < 100 ) {
+            document.write("<br>" + "Muito bem você está na média" + "</br>");
+          }
+          else if(media >= 20 && media < 50){
+            document.write("<br>" + "Você está ficando abaixo da média sua media é: ") + "</br>";
+          }
+          else {
+            document.write("<br>" + "É precisamos estudar mais...") + "</br>";
+          }
+
+          var continua = "não";
+          var continua = prompt("Deseja continuar?");
+
+        }while(continua == "sim");*/
+
+      //AULA 07- ARRAYS
+      //multiplos[0];
+
+      /*multiplos = [1,2,3,4,5]
+        //console.log(multiplos.length);
+        console.log(multiplos.push(6));
+        console.log(multiplos);*/
+
+      /*const array = [
+            "Jhon",
+            "Lucas",
+            "Carl",
+            "Rosi"];
+        console.log(array);
+
+        //criando arrays e fornecer elementos
+        const cars = [];
+
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+        console.log(cars);
+
+        const cars1 = new Array("Saab", "Volvo", "BMW");
+        console.log(cars1);
+
+        //Acessando elementos do Array
+        const cars2 = ["Saab", "Volvo", "BMW"];
+        let car2 = cars[0];
+        console.log(car2);
+
+        //Alterando um elemento de array
+        const cars3 = ["Saab", "Volvo", "BMW"];
+        cars3[0] = "Opel";
+        console.log(cars3);
+
+        // Convertendo um array em uma String
+        // com toString
+        const fruits = ["Banana", "Orange", "Apple", "Mango"].toString();
+        console.log(fruits);*/
+
+      //com join
+      /*var arr_1 = ["Programador", "Jhon"].join();
+        var arr_2 = ["Programador", "Lucas"].join("-");
+        var arr_3 = ["Programador", "Pedro"].join(" ");
+
+        console.log(arr_1);
+        console.log(arr_2);
+        console.log(arr_3);
+
+        var arr = JSON.stringify(["Programador", "Viking"]);
+        console.log(arr);
+
+        // com Type Coercing
+        var str_1 = ["Eu", "tenho", 18, "anos"] + "";
+        var str_2 = String(["Eu", "tenho", 18, "anos"]);
+        console.log(str_1);
+        console.log(str_2);
+
+        // matrizes são objetos
+        const person = {firstName: "jhon", lastName: "Santos", age: 28};
+        console.log(person.firstName);*/
+
+      /*// Elementos da matriz podem ser objetos
+         myArray[0] = Date.now;
+         myArray[1] = myFunction;
+         myArray[2] = myCars;
+
+        // A propriedade do comprimento
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let length = fruits.length;
+
+        console.log(fruits);*/
+
+      /*// Acessando o primeiro elemento da matriz
+        const fruits = ["Banana", "Orange", "Apple", "Mango"]
+        let fruit = fruits[0];*/
+
+      /*// Acessando o último elemento da matriz
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits[fruits.length - 1];
+        console.log(fruit);*/
+
+      /*// Elementos da matriz em loop
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        console.log(fLen);
+
+        let text = "<ul>";
+        console.log(text);
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        console.log(text);
+
+        console.log(fLen);*/
+
+      /*// Também podemos usar a Array.forEach() função
+        const fruits = ["Banana", "Orange","Apple", "Mango"];
+
+        let text = "<ul>";
+
+        fruits.forEach(myFunction);
+
+        text += "</ul>";
+
+        console.log(text)
+
+        function myFunction(value) {
+            text += "<li>" + value + "</li>";
+            console.log(text);
+        }*/
+
+      /*// Adicionando Elementos de Matriz
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits.push("Lemon", "Uva"); // Adds a new element (Lemon) to fruits
+
+        console.log(fruits);
+        console.log(fruits.length);*/
+
+      /*// Um novo elemento também pode ser adicionado a um array
+        // usando a length propriedade
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits[fruits.length] = "Lemon"; // Adds "Lemon" to fruits
+        fruits[fruits.length] = "Uva";
+        console.log(fruits);*/
+
+      /*// CUIDADO
+        // ADICIONAR ELEMENTOS COM ÍNDICES ALTOS PODE CRIAR "BURACOS"
+        // INDEFINIDOS EM UM ARRAY:
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits[6] = "Lemon"; // creates undefined "holes" in fruits
+        console.log(fruits);*/
+
+      // Diferença entre matrizes e objetos
+      // Em JavaScript, os arrays usam índices numerados.
+      // Em JavaScript, os objetos usam índices nomeados.
+
+      // JavaScript nova matriz()
+      /*const points = new Array();
+        const points = [];*/
+
+      /*const points = new Array(40, 100, 1, 5, 25, 10);
+        const points = [40, 100, 1, 5, 25, 10];*/
+      /*
+        // Aula 8 Laços e Iterações
+        a = 1;
+        while(a < 11) {
+            console.log("1 * " + a + " = " + (1 * a));
+            a = a + 1;
+        }
+
+        valor = 7;
+        for(b= 1; b < 101; b++) {
+            console.log(valor + " * " + b + " = " + (valor * b));
+        }
+
+        tab = 1;
+        for(nur = 0; nur < 1001; nur++) {
+            console.log("1 " + " X " + nur + " = " + (tab * nur));
+        }
+
+        tabuada = parseInt(prompt("Digite um número"));
+
+        final = parseInt(prompt("Informe o Limite"));
+
+        for(nur = 1; nur < final; nur++) {
+            console.log(tabuada + " X " + nur + " = " + (nur * tabuada));
+        }
+        */
+
+      /*// Aula 9, 10 e 11 Exercicios laço de repetição 1
+        perg = parseInt(prompt("Informe a quantidade de pessoas"));
+        valor_clientes = [];
+        valor = parseInt(prompt("Digite a quantidade de clientes: "));
+
+        for (num = 0; num <= valor; num++) {
+            valor = Number(prompt("Digite o valor do cliente"));
+            valor_clientes.push(valor);
+        }*/
+
+      /*//Aula 12 HASH
+        a = {};
+        a.nome = "Jhon";
+        a.idade = 28;
+        a.peso = 100;
+
+        console.log("A descrição da Hash é: " + a.nome + " " + a.idade + " " + a.peso);
+
+        //armazenando hash em um array
+        aa = [a];
+        k = {nome: "Jhon", cpf: "00000000", sexo: "M"};
+        console.log(k.nome + " " + k.cpf + " " + k.sexo);
+
+        dados = {
+            nome: "Jhon",
+            idade: 28,
+            cpf: "00000000",
+            sexo: "M",
+            profissao: "Programador",
+        };
+
+        console.log(dados.nome + " " + dados.cpf + " " + dados.sexo);
+
+        //ou
+        login = {
+            user: "jhon.santos",
+            senha: "@Jh0N@1995",
+        };
+
+        console.log(login.user);
+        console.log(login.senha);
+
+        endereco = {
+            rua: "Três Pontas",
+            numero: 5,
+            cep: 45871455,
+            estado: "Minas Gerais",
+            cidade: "Belo Horizonte",
+            bairro: "Bomfim",
+        };
+
+        //array com conjunto
+        console.log((conjunto = [dados, login, endereco, dados]));
+
+        //hash table
+        const collection = new Map();
+
+        collection.set("Jhon Santos", "555-0182");
+        collection.set("Jane", "555-0182");
+
+        console.log(collection.get("Jhon Santos"));
+        console.log("Tamaho: " + collection.size);*/
+
+      //AULA 13 - FUNÇÕES
+      /*function mostra(mensagem){
+              alert(mensagem);
+          }
+
+          mostra("Criando primeira função.");
+
+          function mostra(mensagem){
+              document.write(mensagem);
+          }
+
+          mostra("Criando a segunda função.");
+
+          var mostra = function(mensagem){
+              alert(mensagem);
+          }
+
+          mostra("Criando a terceira função.");
+
+          aluno = {nome: "Jhon Santos", notas: [1,2], media: function(){ return (aluno.notas[0] + aluno.notas[1]) / 2}}
+          alert(aluno.nome);
+          alert(aluno.notas);
+          alert(aluno.media());
+
+          var x, y, recebe;
+
+          function calcula(x, y){
+              return  recebe = x + y + 6 * 9 - 10 + 100;
+          }
+
+          alert(calcula(8, 9));*/
+
+      /*Uma função usa a instrução return para retornar
+          um valor a quem a chamou. Veja como funciona:
+        function multiplicar(a, b) {
+          var a = Number(prompt("Valor 1: "));
+          var b = Number(prompt("Valor 2: "));
+          return a * b;
+        }
+
+        var x = multiplicar();
+        alert("O valor da múltiplicação: " + x);*/
+
+      /*Ao usar operador ()  estamos invocando a função obtendo o seu retorno.
+            Sem usar o operador () obtemos o tipo function:*/
+      /*function converteFahrenheitCelsius(fahrenheit){
+              return (5/9) * (fahrenheit - 32);
+            }
+
+            let resultado1 = converteFahrenheitCelsius;
+            alert("Resultado1: " + resultado1);
+            alert("converteFahrenheitCelsius: " + typeof converteFahrenheitCelsius);
+            alert("-----------------------------");
+
+            let resultado2 = converteFahrenheitCelsius(10);
+            alert("Resultado2: " + resultado2);
+            alert("converteFahrenheitCelsius(): " + typeof converteFahrenheitCelsius());
+            */
+
+      /*As funções podem ser usadas como variáveis em
+            fórmulas, atribuições e cálculos. Veja:
+            function converteFahrenheitCelsius1(fahrenheit){
+              return (5/9) * (fahrenheit - 32);
+            }
+
+            var x = converteFahrenheitCelsius1(88);
+            var texto = "A temperatura é " + x + " Celsius";
+            alert("Resultado converteFahrenheitCelsius1: " + texto);*/
+
+      /*Ou você pode usar a função diretamente como um valor de variável:
+            function converteFahrenheitCelsius2(fahrenheit){
+              return (5/9) * (fahrenheit - 32);
+            }
+
+            var texto = "A temperatura é " + converteFahrenheitCelsius2(99); + " Celsius";
+            alert(texto);*/
+
+      /*Elas também podem ser passadas ​​como argumentos para outras funções ou retornadas dessas funções.
+            debugger;
+            function mensagem1(){
+              alert("Função JavaScript!");
+            }
+
+            alert("mensagem1: " + typeof mensagem1);
+            alert("mensagem1: " + mensagem1 instanceof Object);
+
+            alert("mensagem1: " + typeof Object);
+            const Teste = function(){}
+            alert("mensagem1: " +  typeof Teste);*/
+
+      /*Agora, existe mais de uma forma de criar uma função em JavaScript,
+            e uma delas é usando a sintaxe  'new Function'. Observe:
+            let soma = new Function("a", "b", "return a + b");
+
+            alert("Soma: " + soma(10, 20));
+
+            alert("Soma: " + typeof soma);*/
+
+      /*Não confunda a sintaxe acima com  'new function()'.
+            No código a seguir estou criando um novo objeto e aplicando um construtor anônimo:
+            var func = new function(){
+               this.propriedade = "valor";
+            }
+
+            alert("Func: " + typeof func);*/
+
+      /*Atenção !!!  o tipo de function() é diferente de new function(). Veja:
+            const teste1 = function Teste1(){}
+            const teste2 = new function Teste2(){}
+
+            alert("Function: " + typeof teste1);
+            alert("Object: " + typeof teste2);*/
+
+      /*Faça um programa que traduza a função mostre e função leia
+            crie uma função chamada calculo expressão que calcule a seguinte
+            expressão;
+            x * y + 85 - 10 * 8*/
+
+      /* //mais sobre funções
+        leia = function (mensagem) {
+          return prompt(mensagem);
+        };
+
+        leia("Informe o seu nome: ");
+
+        var expressao,
+          x = 2,
+          y = 1;
+
+        expressao = x + y + 6 * 9 - 10 + 100;
+
+        console.log("Expressão regular: " + expressao);*/
+
+      /*function calcula(x, y) {
+          return x + y + 6 * 9 - 10 + 100;
+        }
+
+        alert("Expressão regular: " + calcula(8, 9));*/
+
+      //exercicio - 1
+      /*Faça um programa que traduza a função mostre e a função leia
+        e também crie uma função chamada calculo expressao. A expressão será:
+        x * y + 85 - 10 * 8. Solicitar 2 números e mostrar o resultado final da operação.
+
+        var x, y, recebe;
+
+        function calculoExpressao(x, y) {
+          return (recebe = x * y + 85 - 10 * 8);
+        }
+
+        function leia() {
+          var x = Number(prompt("Informe o valor do 1° valor: "));
+          var y = Number(prompt("Informe o valor do 2° valor: "));
+
+          var resultado = calculoExpressao(x, y);
+          document.write(resultado);
+        }
+
+        function mostrar(mensagem) {
+          document.write(mensagem);
+        }
+
+        mostrar("O resultado do calculo da expressão é: ");
+        leia();*/
+
+      //exercicio - 2
+      /*Faça um programa que pergunte uma opção para o usuário:
+
+        opção 1 = mostrar calculo da tabuada
+        opção 2 = mostrar média dos alunos
+        opção 3 = para o programa
+
+        o objetivo é ter um loop onde irá ficar perguntando para o usuário,
+        até ele digitar a opção 3 e sair do programa.
+
+      function tabuada() {
+        alert("Opção selecionada: "  + " Cálculo da tabuada.");
+        var valorTabuada = parseInt(
+          prompt("Informe o valor para o cálculo da tabuada.")
+        );
+        for (conta = 1; conta <= 10; conta++) {
+          var recebe = valorTabuada + conta;
+          console.log(valorTabuada + " + " + conta + " = " + recebe);
+        }
+      }
+
+      function mediaAlunos() {
+        alert("Opção selecionada: " + " Média de Alunos.");
+        var quantidade = parseInt(prompt("Informe a quantidade de alunos."));
+
+        var notas = [];
+        for (a = 0; a < quantidade; a++) {
+          var nota = parseInt(prompt("Digite a nota do aluno " + (a + 1)));
+          notas.push(nota);
+        }
+
+        var somaNotas = notas.reduce((x, y) => x + y);
+        console.log("O valor da media dos alunos é: " + somaNotas / notas.length);
+      }
+
+      opcao();
+      mediaAlunos();
+
+      function opcao() {
+        var parar = 0;
+        do {
+          var selecao = parseInt(
+            prompt(
+              "Selecione uma das opções abaixo: \n" +
+                "\nOpção 1 = mostrar cálculo da tabuada." +
+                "\nOpção 2 = mostrar média dos alunos." +
+                "\nOpção 3 = parar o programa."
+            )
+          );
+
+          if (selecao == 1) {
+            tabuada();
+          } else if (selecao == 2) {
+            mediaAlunos();
+          }
+        } while (parar == 3);
+      }
+      */
+      //Aula 16 | Funções Recursivas
+
+      /*boloDeCenoura = function(){
+            console.log("Bolo feito");
+        }
+
+
+        boloDeCenoura = function(escape){
+            console.log("Bolo feito: " + escape);
+            if(escape >= 100){
+                return
+            }
+            boloDeCenoura(escape + 1);
+        }
+
+        boloDeCenoura(1);
+
+        function countDown(fromNumber){
+            console.log(fromNumber);
+
+            let nextNumber = fromNumber - 1;
+
+           if(nextNumber > 0){
+            countDown(nextNumber);
+           }
+        }
+
+        countDown(3);*/
+
+      /*let countDown = function f (fromNumber){
+            console.log(fromNumber);
+
+            let nextNumber = fromNumber - 1;
+
+            if (nextNumber > 0){
+                f(nextNumber);
+            }
+        }
+
+        let newYearCountDown = countDown;
+        countDown = null;
+        newYearCountDown(10);
+
+        //2) Calcular a soma dos dígitods de um número
+        function sumOfDigits(num){
+            if(num == 0 ){
+                return 0;
+            }
+            return num % 10 + sumOfDigits(Math.floor(num / 10));
+        }*/
+
+      /*var valor;
+        fatorial = function (x){
+          if(x <= 1){
+            return 1;
+          }
+          else{
+            return x * fatorial(x-1);
+          }
+        }
+
+        valor = prompt("Informe o valor: ");
+        console.log("Fatorial: " + fatorial(valor));*/
+
+      /*//fibonacci
+        fibonacciJ = function(n){
+          var fibSeq = [];
+          fibSeq[0] = 0;
+          fibSeq[1] = 1;
+
+          for(var i = 2; i <= n; i++){
+            fibSeq[i] = fibSeq[i - 1] + fibSeq[i - 2];
+          }
+
+          return fibSeq
+        }
+
+        var numero = prompt("Informe um número: ");
+        console.log("Fibonacci: " + fibonacciJ(numero));*/
+
+      /* //em error
+        var recebe,
+            valor1,
+            valor2;
+
+        somaRecursao = function(valor1, valor2){
+           var recebe = valor1 + valor2;
+           return recebe;
+        }
+
+        var numero1 = prompt("Informe o primeiro valor: ");
+        var numero2 = prompt("Informe o segundo valor: ");
+
+        console.log("Resultado da soma recursiva: " + somaRecursao(recebe));*/
+
+      /*let tabuada = function () {
+          if (inicio_numero_tabuada > fim_numero_tabuada) {
+            return;
+          }
+          document_write(
+            inicio_numero_tabuada +
+              " X " +
+              multiplicador +
+              " = " +
+              inicio_numero_tabuada * multiplicador
+          );
+          tabuada(inicio_numero_tabuada + 1, fim_numero_tabuada, multiplicador);
+        };
+
+        numero = Number(prompt("Digite um numero para tabuada"));
+        tabuada(1, 10, numero);
+
+        function mediaAlunos() {
+          alert("Opção selecionada: " + " Média de Alunos.");
+          var quantidade = parseInt(prompt("Informe a quantidade de alunos."));
+
+          var notas = [];
+          for (a = 0; a < quantidade; a++) {
+            var nota = parseInt(prompt("Digite a nota do aluno " + (a + 1)));
+            notas.push(nota);
+          }
+
+          var somaNotas = notas.reduce((x, y) => x + y);
+          console.log(
+            "O valor da media dos alunos é: " + somaNotas / notas.length
+          );
+        }
+
+        function opcao() {
+          var selecao = parseInt(
+            prompt(
+              "Selecione uma das opções abaixo: \n" +
+                "\nOpção 1 = mostrar cálculo da tabuada." +
+                "\nOpção 2 = mostrar média dos alunos." +
+                "\nOpção 3 = parar o programa."
+            )
+          );
+
+          if (selecao == 1) {
+            tabuada();
+          } else if (selecao == 2) {
+            mediaAlunos();
+          } else if (opcao == 3) {
+            return;
+          } else if (opcao != 3) {
+            alert("Opção invalida");
+          }
+          opcao();
+        }
+        tabuada();*/
+
+      //Aula 17: Exercitando funções recursivas
+      /*debugger;
+      var numero;
+
+      function tabuada() {
+        numero = Number(prompt("Digite um número para Tabuada"));
+        for (tab = 0; tab <= 10; tab++) {
+          mostrarNaTela(`${numero} x ${tab} = ${tab * numero}`);
+        }
+      }
+
+      function media() {
+        var nota1 = parseFloat(prompt("Digite nota 1: "));
+        var nota2 = parseFloat(prompt("Digite nota 2: "));
+        var mediaAlunos = (nota1 + nota2) / 2;
+        mostrarNaTela("A media do aluno é: " + mediaAlunos);
+      }
+
+      let chamada = function () {
+        opcao = Number(
+          prompt(
+            "digite uma opção \n 1- Mostrar calculo da tabuada \n 2- Mostrar média dos alunos \n 3- Sair do Programa "
+          )
+        );
+
+        if (opcao == 1) {
+          tabuada();
+        } else if (opcao == 2) {
+          media();
+        } else if (opcao == 3) {
+          return;
+        } else if (opcao != 3) {
+          alert("Opcao invlida");
+        }
+        chamada();
+      };
+
+      function mostrarNaTela(mensagem) {
+        document.write(mensagem + "<br>");
+      }
+
+      chamada();
+
+      var tabuada = function (
+        inicio_numero_tabuada,
+        fim_numero_tabuada,
+        multiplicador
+      ) {
+        var mensagem;
+
+        /* if (inicio_numero_tabuada > fim_numero_tabuada) {
+          return;
+        }
+
+        document.write(
+          inicio_numero_tabuada +
+            " X " +
+            multiplicador +
+            " = " +
+            inicio_numero_tabuada * multiplicador +
+            "<br>"
+        );
+
+        //tabuada(inicio_numero_tabuada + 1, fim_numero_tabuada, multiplicador);
+      };
+
+      //var numero = Number(prompt("Digite um número para a tabuada"));
+
+      tabuada(1, 10, numero);*/
+
+      //-------------------------------PRÁTICA LÓGICA COMPLETA------------------------------------
+      /*1. Dado o tamanho da base e da altura de um retângulo,
+          calcular a sua área e o seu perímetro
+          alert("Calculo retângulo");
+          let altura = parseFloat(prompt("Informe a altura: "));
+          let base = parseFloat(prompt("Infome a base: "));
+
+          let resultado = ((altura * base));
+
+          if(altura != parseFloat && base != parseFloat) {
+            alert("A base do retângulo é: " + resultado);
+          } else {
+            alert("Dados invalidos informe valores inteiros ou com casas decimais");
+          }
+        */
+      /*
+        2.Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo
+        do{
+            var continua = "nao";
+            var area = Number(prompt("Informe a área do quadrado: "));
+            var recebe = area * 4;
+
+            alert("Resultado: " + recebe);
+
+            continua = String(prompt("Deseja continuar?"));
+        }while(continua == "Sim" || continua == "sim");*/
+
+      /*3. Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma*/
+
+      /*4. Dado os três lados de um triângulo determinar o perímetro do mesmo.
+        var lado = Number(prompt("Informe o lado do triângulo"));
+        recebe = (lado + lado + lado);
+
+        alert("O resultado do perímetro é: " + recebe);*/
+
+      /*5.Ler um número inteiro e exibir o seu sucessor.
+        do {
+            var menor = 1;
+            var continua = "não";
+            var valor = Number(prompt("Informe o valor: "));
+
+            var recebe = valor - menor;
+
+            alert("Antecessor: " + recebe);
+
+            continua = String(prompt("Deseja continuar?"));
+
+        }while(continua == "Sim" || continua == "sim");*/
+
+      /*6.Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.
+        var numeros = [];
+        leitor = function(){
+          var dividendo,
+              divisor,
+              inteiro,
+              resto;
+
+          dividendo = Number(prompt("Digite o dividendo: "));
+          divisor = Number(prompt("Digite o divisor: "));
+
+          resto = dividendo % divisor;
+          var conciente = dividendo / divisor;
+
+          console.log("Resto: " + resto);
+          console.log("Conciente: " + conciente);
+
+        }
+
+        leitor();
+        */
+      // 07 Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.
+
+      //10. Converter um inteiro informado menor que 32 para sua representação em binário
+      /*binario = function (valor) {
+        var valor;
+
+        if (valor < 32) {
+          return binario(parseInt(valor / 2)) + (valor % 2);
+        } else {
+          alert("Informe um valor menor que 32.");
+        }
+        return "";
+      };
+
+      onload = function () {
+        console.log(binario(25));
+      };*/
+
+      /*14. Em uma cidade se deseja sincronizar os semáforos. Com isto, quando um semáforo abre
+        (fica verde), os veículos que nele estavam parados tendem a encontrar os próximos
+        semáforos também abertos. Para que isto seja feito, os próximos semáforos precisam
+        abrir um pouco depois, dependendo da velocidade permitida na via e da distância entre
+        eles. Assim, ao abrir o semáforo, um veículo começa a acelerar até atingir a velocidade
+        permitida, que mantém até chegar ao próximo semáforo, levando um certo tempo para
+        percorrer essa distância. Para que encontre o próximo semáforo aberto, este deve abrir
+        um pouco antes da chegada do veículo (por ex: 3 segundos antes). Faça assim um
+        algoritmo que informe quanto tempo depois um semáforo deve abrir, dada as seguintes
+        informações:
+        a. a distância desde o semáforo anterior
+        b. a velocidade permitida da via
+        c. a aceleração típica dos carros
+        */
+
+      /*
+        17. Um programa para gerenciar os saques de um caixa eletrônico deve possuir algum
+        mecanismo para decidir o número de notas de cada valor que deve ser disponibilizado
+        para o cliente que realizou o saque. Um possível critério seria o da "distribuição ótima"
+        no sentido de que as notas de menor valor fossem distribuídas em número mínimo
+        possível. Por exemplo, se a quantia solicitada fosse R$ 87,00, o programa deveria indicar
+        uma nota de R$ 50,00, três notas de R$ 10,00, uma nota de R$ 5,00 e duas notas de R$
+        1,00. Escreva um programa que receba o valor da quantia solicitada e retorne a
+        distribuição das notas de acordo com o critério da distribuição ótima (considere existir
+        notas de R$1,00; R$2,00; R$5,00; R$10,00; R$20,00; R$50,00 e R$100,00).
+      */
+      /*18. Escreva um programa que permute o valor de duas variáveis inteiras.*/
+
+      /*19. Escreva um programa que calcule a raiz de uma equação do primeiro grau.*/
+
+      /*20. Uma loja vende seus produtos no sistema entrada mais duas prestações, sendo a entrada
+      maior do que ou igual às duas prestações, as quais devem ser iguais, inteiras e as maiores
+      possíveis. Por exemplo, se o valor da mercadoria for R$ 270,00, a entrada e as duas
+      prestações são iguais a R$ 90,00; se o valor da mercadoria for R$ 302,75, a entrada é de
+      R$ 102,75 e as duas prestações são a iguais a R$ 100,00. Escreva um programa que
+      receba o valor da mercadoria e forneça o valor da entrada e das duas prestações, de
+      acordo com as regras acima. Observe que uma justificativa para a adoção desta regra é
+      que ela facilita a confecção e o consequente pagamento dos boletos das duas prestações*/
+      /*function loja() {
+        var valor = prompt("Informe o valor do produto: ");
+        if (valor == 270) {
+          var entrada = 90;
+          var prestacao1 = 90,
+            prestacao2 = 90;
+          alert(
+            "Valor: " +
+              valor +
+              "\n" +
+              "Entrada: " +
+              entrada +
+              "\n" +
+              "Prestação1: " +
+              prestacao1 +
+              "\n" +
+              "Prestação2: " +
+              prestacao2
+          );
+        } else if (valor == 302.75) {
+          var entrada = 102.75;
+          var prestacao1 = 100,
+            prestacao2 = 100;
+
+          alert(
+            "Valor: " +
+              valor +
+              "\n" +
+              "Entrada: " +
+              entrada +
+              "\n" +
+              "Prestação1: " +
+              prestacao1 +
+              "\n" +
+              "Prestação2: " +
+              prestacao2
+          );
+        }
+      }
+
+      loja();*/
+
+      /*21. Escreva um programa que leia um número e exiba se ele é positivo ou negativo.*/
+      /*function negativoPositivo() {
+        var valor = prompt("Informe o valor: ");
+
+        if (valor > 0) {
+          alert("O valor " + valor + " informado é positivo.");
+        } else if (valor <= 0) {
+          alert("O valor " + valor + " informado é negativo.");
+        }
+      }
+
+      negativoPositivo();*/
+
+      /*22. Escreva um programa que leia um número e exiba o seu módulo.
+      function modulo(){
+        var valor = [];
+        valor = prompt("Digite um valor:");
+        const modulo = Math.abs(valor);
+
+        alert("O módulo do valor é: " + modulo);
+      }
+
+      modulo();*/
+
+      /*23. Escreva um programa que leia um número e imprima se este número é ou não par.
+      function parImpar(){
+        var valor = prompt("Informe o valor: ");
+
+        if(valor % 2 == 0){
+          alert(valor + " é par");
+        }
+        else {
+          alert( valor + " é impar");
+        }
+      }
+
+      parImpar();*/
+
+      /*24. Escreva um programa que leia três números e mostre o maior entre eles.
+      function maiorValor() {
+        // Inicializa a variável para armazenar o maior número
+        var maior;
+
+        // Loop para solicitar ao usuário inserir três números
+        for (var i = 0; i < 3; i++) {
+          var numero = parseFloat(prompt("Digite o número " + (i + 1) + ":"));
+          if (i === 0 || numero > maior) {
+            maior = numero;
+          }
+        }
+
+        // Mostra o maior número
+        console.log("O maior número é: " + maior);
+      }
+
+      maiorValor();*/
+
+      /*25. Escreva um programa que leia o número equivalente ao mês e imprima a quantidade de
+      dias deste mês.*/
+
+      /*1.Faça um programa que peça uma nota, entre zero e dez.
+        Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido.
+
+        let cont = 0;
+        do {
+            let valor = parseInt(prompt("Informe o valor: " + cont));
+
+            if (valor <= 0 || valor > 10){
+            alert("Valor inválido.");
+            }
+
+        } while(cont <= 10);*/
+
+      /*25. Escreva um programa que leia o número equivalente ao mês e imprima a quantidade de
+      dias deste mês.
+      function mes() {
+        var valor = 31;
+        var mes = parseInt(prompt("Informe o mês: "));
+
+        switch (mes) {
+          case 1:
+            alert("Mês: Janeiro. " + valor + " dias.");
+            break;
+          case 2:
+            var recebe = (valor - 2);
+            alert("Mês: Fevereiro. " + recebe + " dias.");
+            break;
+          case 3:
+            alert("Mês: Março. " + valor + " dias");
+            break;
+          case 4:
+            var recebe = (valor - 1);
+            alert("Mês: Abril. " + recebe + " dias.");
+            break;
+          case 5:
+            alert("Mês: Maio. " + valor + " dias.");
+            break;
+          case 6:
+            var recebe = (valor - 1);
+            alert("Mês: Junho. " + recebe + " dias.");
+            break;
+          case 7:
+            alert("Mês: Julho. " + valor + " dias.");
+            break;
+          case 8:
+            alert("Mês: Agosto. " + valor + " dias.");
+            break;
+          case 9:
+            var recebe = (valor - 1);
+            alert("Mês: Setembro. " + recebe + " dias.");
+            break;
+          case 10:
+            alert("Mês: Outubro. " + valor + " dias.");
+            break;
+
+          case 10:
+            var recebe = (valor - 1);
+            alert("Mês: Novembro. " + recebe + " dias.");
+            break;
+          case 11:
+            alert("Mês: Dezembro. " + recebe + " dias.");
+            break;
+        }
+      }
+
+      mes();*/
+      /*26. Escreva um programa que leia 3 valores e escreva a soma dos 2 maiores.
+
+      function somaDosDoisMaiores(valores) {
+        // Ordena o array em ordem decrescente
+        valores.sort(function (a, b) {
+          return b - a;
+        });
+        // Soma os dois maiores valores
+        var soma = valores[0] + valores[1];
+
+        return soma;
+      }
+      // Função para ler os valores do usuário
+      function lerValores() {
+        var valores = [];
+        for (var i = 0; i < 3; i++) {
+          var valor = parseInt(prompt("Digite o " + (i + 1) + "º valor:"));
+          valores.push(valor);
+        }
+        return valores;
+      }
+
+      // Lê os valores do usuário
+      var valores = lerValores();
+
+      // Calcula a soma dos dois maiores valores e exibe o resultado
+      var resultado = somaDosDoisMaiores(valores);
+      console.log("A soma dos dois maiores valores é: " + resultado);
+      //lerValores();
+      //somaDosDoisMaiores();*/
+
+      /*27. Escreva um programa que leia 3 números e calcule a média ponderada entre eles.
+      Considere que o maior número recebe peso 5 e os outros dois recebem peso 2, 5.*/
+
+      /*28. Escreva um programa que leia uma letra e mostre se ela é vogal ou consoante.*/
+      /*29. Escreva um programa que calcula o desconto previdenciário de um funcionário.Dado um
+      salário, o programa deve retornar o valor do desconto proporcional ao mesmo.O cálculo
+      segue a regra: o desconto é de 11 % do valor do salário, entretanto, o valor máximo de
+      desconto é 334, 29, o que seja menor.*/
+
+      /*32. Escreva um programa que leia um caracter e diga se ele é uma vogal, consoante, número
+            ou um símbolo (qualquer outro caracter, que não uma letra ou número).*/
+      /*function definicaoCaractere() {
+              var caractere = prompt("Informe o caractere: ");
+
+              if (
+                caractere == "a" ||
+                caractere == "e" ||
+                caractere == "i" ||
+                caractere == "o" ||
+                caractere == "u" ||
+                caractere == "w" ||
+                caractere == "y"
+              ) {
+                alert("O caractere: " + caractere + " informado é uma vogal.");
+              } else if (
+                caractere == "b" ||
+                caractere == "c" ||
+                caractere == "d" ||
+                caractere == "f" ||
+                caractere == "g" ||
+                caractere == "h" ||
+                caractere == "j" ||
+                caractere == "k" ||
+                caractere == "l" ||
+                caractere == "m" ||
+                caractere == "n" ||
+                caractere == "p" ||
+                caractere == "q" ||
+                caractere == "r" ||
+                caractere == "s" ||
+                caractere == "t" ||
+                caractere == "v" ||
+                caractere == "x" ||
+                caractere == "z"
+              ) {
+                alert("O caractere: " + caractere + " informado é uma consoante.");
+              } else if (caractere >= 0) {
+                alert("O caractere: " + caractere + " informado é um número.");
+              } else if (caractere <= 0) {
+                alert(
+                  "O caractere: " + caractere + " informado é um número negativo."
+                );
+              } else {
+                alert(
+                  "O caractere: " + caractere + " informadao é um caractere especial."
+                );
+              }
+            }
+            definicaoCaractere();*/
+
+      //código acima refatorado pelo chatgpt
+      function definicaoCaractere() {
+        var caractere = prompt("Informe o caractere: ");
+        var mensagem;
+
+        if (/[aeiouwy]/.test(caractere)) {
+          mensagem = "informado é uma vogal.";
+        } else if (/[bcdfghjklmnpqrstvzx]/.test(caractere)) {
+          mensagem = "informado é uma consoante.";
+        } else if (!isNaN(caractere)) {
+          if (caractere > 0) {
+            mensagem = "informado é um número.";
+          } else {
+            mensagem = "informado é um número negativo.";
+          }
+        } else {
+          mensagem = "informado é um caractere especial.";
+        }
+
+        alert("O caractere: " + caractere + " " + mensagem);
+      }
+      //definicaoCaractere();
+
+      /*33. Escreva um algoritmo que leia 2 valores (x e y), que devem representar as coordenadas
+              de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o
+              ponto, ou se está sobre um dos eixos cartesianos ou na origem (x=y=0).*/
+      function planoCartesiano() {}
+
+      /*34. Uma financeira usa o seguinte critério para conceder empréstimos: o valor total do
+              empréstimo deve ser até dez vezes o valor da renda mensal do solicitante e o valor da
+              prestação deve ser no máximo 30% da renda mensal do solicitante. Escreva um programa
+              que leia a renda mensal de um solicitante, o valor total do empréstimo solicitado e o
+              número de prestações que o solicitante deseja pagar e informe se o empréstimo pode ou
+              não ser concedido.*/
+      function emprestimo() {
+        var idadeSolicitante = prompt("Informe a idade do solicitante: ");
+
+        if (isNaN(idadeSolicitante) || idadeSolicitante <= 0) {
+          alert("Informe uma idade válida.");
+          return;
+        }
+
+        if (idadeSolicitante < 18) {
+          alert(
+            "O solicitante deve ser maior de idade para realizar o empréstimo."
+          );
+          return;
+        }
+
+        var rendaMensal = parseFloat(prompt("Informe a renda mensal: "));
+
+        if (isNaN(rendaMensal) || rendaMensal <= 0) {
+          alert("Informe uma renda mensal válida.");
+          return;
+        }
+
+        var valorTotalEmprestimo = rendaMensal * 10;
+        var valorTotalPrestacao = 0.3 * valorTotalEmprestimo;
+
+        var emprestimoDesejado = parseFloat(
+          prompt("Informe o valor do empréstimo: ")
+        );
+
+        if (isNaN(emprestimoDesejado) || emprestimoDesejado <= 0) {
+          alert("Informe um valor de empréstimo válido.");
+          return;
+        }
+
+        if (emprestimoDesejado > valorTotalEmprestimo) {
+          alert("Empréstimo solicitado excede o valor máximo permitido.");
+          return;
+        }
+
+        var quantidadePrestacoes = parseFloat(
+          prompt("Informe a quantidade de prestações: ")
+        );
+
+        if (isNaN(quantidadePrestacoes) || quantidadePrestacoes <= 0) {
+          alert("Informe uma quantidade de prestações válida.");
+          return;
+        }
+
+        var prestacaoQuantidade = emprestimoDesejado / quantidadePrestacoes;
+
+        alert(
+          "Valor do empréstimo solicitado: " +
+            emprestimoDesejado +
+            " \nA quantidade de prestações solicitada é: " +
+            quantidadePrestacoes +
+            " \nValor total de cada prestação: " +
+            prestacaoQuantidade
+        );
+      }
+
+      //emprestimo();
+
+      /*35.Escreva um programa que leia um número inteiro de 1 a 7 e informe o dia da semana
+           correspondente, sendo domingo o dia de número 1. Se o número não corresponder a um
+           dia da semana, mostre uma mensagem de erro.*/
+      function diaSemana() {
+        var diaSemana = parseInt(
+          prompt("Informe o dia da semana com os valores entre 1 e 7: ")
+        );
+
+        switch (diaSemana) {
+          case 1:
+            alert("Domingo");
+            break;
+          case 2:
+            alert("Segunda-Feira");
+            break;
+          case 3:
+            alert("Terça-Feira");
+            break;
+          case 4:
+            alert("Quarta-Feira");
+            break;
+          case 5:
+            alert("Quinta-Feira");
+            break;
+          case 6:
+            alert("Sexta-Feira");
+          case 7:
+            alert("Sabádo");
+        }
+      }
+
+      //diaSemana();
+
+      /*36. Em uma certificação são feitos são feitos 5 exames (I, II, III, IV e V). Escreva um
+        programa que leia as notas destes exames e imprima a classificação do aluno, sabendo
+        que a média é 70.
+        Classificação: A – passou em todos os exames;
+        B – passou em I, II e IV, mas não em III ou V;
+        C – passou em I e II, III ou IV, mas não em V.
+        Reprovado – outras situações.*/
+
+      /*37. Uma Cia de pulverização utiliza avião para pulverizar lavouras. Os custos de
+        pulverização dependem do tipo de praga e da área a ser contratada conforme a tabela:
+        Tipo 1 – ervas daninhas R$ 50,00 por acre;
+        Tipo 2 – gafanhotos R$ 100,00 por acre;
+        Tipo 3 – broca R$ 150,00 por acre;
+        Tipo 4 – todos acima R$ 250,00 por acre.
+        Se a área a ser pulverizada for superior a 1000 acres, o fazendeiro tem um desconto de
+        5%. Em adição, qualquer fazendeiro cujo custo for maior do que R$ 750,00 tem um
+        desconto de 10% sobre o valor que ultrapassar os R$ 750,00. Caso ambos os descontos se
+        aplicam o da área é calculado antes. Fazer um algoritmo que leia: o tipo de pulverização
+        (1 a 4) e área a ser pulverizada; e imprima o valor a ser pago.*/
+      function ciaPulverizacao() {
+        debugger;
+        var tipoPulverizacao = parseInt(
+          prompt(
+            "Informe o tipo de pulverização:" +
+              "\nTipo 1: Ervas daninhas R$ 100,00 por acre." +
+              "\nTipo 2: Gafanhotos R$ 150,00 por acre." +
+              "\nTipo 3: Broca R$ 150,00 por acre." +
+              "\nTipo 4: Todos acima R$ 250,00 por acre."
+          )
+        );
+
+        if (isNaN(tipoPulverizacao) || tipoPulverizacao <= 0) {
+          alert("Informe o tipo válido de [1] a [4].");
+          return;
+        }
+        var quantidadeAcres = parseFloat(
+          prompt("Informe a quantidade de Acre: ")
+        );
+
+        if (isNaN(quantidadeAcres) || quantidadeAcres <= 0) {
+          alert("Informe uma quantidade de acres válida");
+          return;
+        }
+
+        if (tipoPulverizacao == 1) {
+          var calculo = 100.0 * quantidadeAcres;
+
+          if (calculo > 750) {
+            var recebe = 0.1 * calculo;
+            alert(
+              "Valores acime de R$ 750.00 obtém um desconto de 10%: " + recebe
+            );
+          }
+          if (quantidadeAcres >= 1000) {
+            var recebe = 0.05 * quantidadeAcres;
+            var desconto = calculo - recebe;
+            alert("Acres acima de 1000 obtem um desonto 5%: " + desconto);
+          }
+          alert("O valor total é: " + " R$" + calculo);
+        } else if (tipoPulverizacao == 2) {
+          var calculo = 150.0 * quantidadeAcres;
+
+          if (calculo > 750) {
+            var recebe = 0.1 * calculo;
+            alert(
+              "Valores acima de R$ 750.00 obtém um desconto de 10%." +
+                "\nValor do desconto: " +
+                recebe
+            );
+            var desconto = calculo - recebe;
+            alert("Valor total: " + desconto);
+          }
+          if (quantidadeAcres >= 1000) {
+            var recebe = 0.05 * quantidadeAcres;
+            var desconto = calculo - recebe;
+            alert("Acres acima de 1000 obtem um desonto 5%: " + desconto);
+          }
+          alert("O valor total é: " + " R$" + calculo);
+        } else if (tipoPulverizacao == 3) {
+          var calculo = 150.0 * quantidadeAcres;
+
+          if (calculo > 750) {
+            var recebe = 0.1 * calculo;
+            alert(
+              "Valores acima de R$ 750.00 obtém um desconto de 10%." +
+                "\nValor do desconto: " +
+                recebe
+            );
+            var desconto = calculo - recebe;
+            alert("Valor total: " + desconto);
+          }
+          if (quantidadeAcres >= 1000) {
+            var recebe = 0.05 * quantidadeAcres;
+            var desconto = calculo - recebe;
+            alert("Acres acima de 1000 obtem um desonto 5%: " + desconto);
+          }
+          alert("O valor total é: " + " R$" + calculo);
+        } else if (tipoPulverizacao == 4) {
+          var calculo = 250.0 * quantidadeAcres;
+
+          if (calculo > 750) {
+            var recebe = 0.1 * calculo;
+            alert(
+              "Valores acima de R$ 750.00 obtém um desconto de 10%." +
+                "\nValor do desconto: " +
+                recebe
+            );
+            var desconto = calculo - recebe;
+            alert("Valor total: " + desconto);
+          }
+          if (quantidadeAcres >= 1000) {
+            var recebe = 0.05 * quantidadeAcres;
+            var desconto = calculo - recebe;
+            alert("Acres acima de 1000 obtem um desonto 5%: " + desconto);
+          }
+          alert("O valor total é: " + " R$" + calculo);
+        }
+      }
+
+      //ciaPulverizacao();
+      /*
+        38. Chama-se ano bissexto o ano ao qual é acrescentado um dia extra, ficando ele com 366
+        dias, um dia a mais do que os anos normais de 365 dias, ocorrendo a cada quatro anos.
+        Escreva um programa que verifique se um ano é bissexto. Um ano é bissexto se ele é
+        divisível por 4. Entretanto, se o ano é divisível por 100, ele não é bissexto. Mas, se ele for
+        divisível por 400, ele volta a ser bissexto.
+        a. São bissextos os anos: 1600, 1996, 2000, 2004, 2008, 2012, 2016, 2400, 2800, ...
+        b. Não são bissextos: 1500, 1974, 1982, 1983, 1990, 2018, 2022, 2030, 2038,*/
+      function tipoAno() {
+        debugger;
+        var resto;
+        var ano = parseInt(
+          prompt(
+            "Informe um ano para verificar se ele é bissexto ou não: " +
+              "\n\nO ano informado deve ser maior ou igual a 1100."
+          )
+        );
+
+        if (isNaN(ano) || ano < 1100) {
+          alert("Data Inválida.");
+          tipoAno();
+        }
+        resto = ano % 4;
+        if (resto == 0) {
+          alert("O ano " + ano + " informado é bissexto. ");
+        } else {
+          alert("O ano " + ano + " informado não é bissexto. ");
+        }
+      }
+
+      //tipoAno();
+
+      /*2.Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário,
+           mostrando uma mensagem de erro e voltando a pedir as informações. */
+      /*43. Escreva um programa que imprima todos os números pares do intervalo fechado de 1 a
+        100.*/
+      //ESTUDAR O CÓDIGO ABAIXO
+      String.prototype.extenso = function (c) {
+        debugger;
+        var ex = [
+          [
+            "zero",
+            "um",
+            "dois",
+            "três",
+            "quatro",
+            "cinco",
+            "seis",
+            "sete",
+            "oito",
+            "nove",
+            "dez",
+            "onze",
+            "doze",
+            "treze",
+            "quatorze",
+            "quinze",
+            "dezesseis",
+            "dezessete",
+            "dezoito",
+            "dezenove",
+          ],
+          [
+            "dez",
+            "vinte",
+            "trinta",
+            "quarenta",
+            "cinqüenta",
+            "sessenta",
+            "setenta",
+            "oitenta",
+            "noventa",
+          ],
+          [
+            "cem",
+            "cento",
+            "duzentos",
+            "trezentos",
+            "quatrocentos",
+            "quinhentos",
+            "seiscentos",
+            "setecentos",
+            "oitocentos",
+            "novecentos",
+          ],
+          [
+            "mil",
+            "milhão",
+            "bilhão",
+            "trilhão",
+            "quadrilhão",
+            "quintilhão",
+            "sextilhão",
+            "setilhão",
+            "octilhão",
+            "nonilhão",
+            "decilhão",
+            "undecilhão",
+            "dodecilhão",
+            "tredecilhão",
+            "quatrodecilhão",
+            "quindecilhão",
+            "sedecilhão",
+            "septendecilhão",
+            "octencilhão",
+            "nonencilhão",
+          ],
+        ];
+        var a,
+          n,
+          v,
+          i,
+          n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","),
+          e = " e ",
+          $ = "real",
+          d = "centavo",
+          sl;
+        for (
+          var f = n.length - 1, l, j = -1, r = [], s = [], t = "";
+          ++j <= f;
+          s = []
+        ) {
+          j && (n[j] = (("." + n[j]) * 1).toFixed(2).slice(2));
+          if (
+            !((a = (v = n[j]).slice((l = v.length) % 3).match(/\d{3}/g)),
+            (v = l % 3 ? [v.slice(0, l % 3)] : []),
+            (v = a ? v.concat(a) : v)).length
+          )
+            continue;
+          for (a = -1, l = v.length; ++a < l; t = "") {
+            if (!(i = v[a] * 1)) continue;
+            (i % 100 < 20 && (t += ex[0][i % 100])) ||
+              ((i % 100) + 1 &&
+                (t +=
+                  ex[1][(((i % 100) / 10) >> 0) - 1] +
+                  (i % 10 ? e + ex[0][i % 10] : "")));
+            s.push(
+              (i < 100
+                ? t
+                : !(i % 100)
+                ? ex[2][i == 100 ? 0 : (i / 100) >> 0]
+                : ex[2][(i / 100) >> 0] + e + t) +
+                ((t = l - a - 2) > -1
+                  ? " " +
+                    (i > 1 && t > 0 ? ex[3][t].replace("ão", "ões") : ex[3][t])
+                  : "")
+            );
+          }
+          a =
+            (sl = s.length) > 1
+              ? ((a = s.pop()), s.join(" ") + e + a)
+              : s.join("") ||
+                ((!j && n[j + 1] * 1 > 0) || r.length ? "" : ex[0][0]);
+          a &&
+            r.push(
+              a +
+                (c
+                  ? " " +
+                    (v.join("") * 1 > 1
+                      ? j
+                        ? d + "s"
+                        : (/0{6,}$/.test(n[0]) ? "de " : "") +
+                          $.replace("l", "is")
+                      : j
+                      ? d
+                      : $)
+                  : "")
+            );
+        }
+        return r.join(e);
+      };
+
+      //alert("100".extenso());
+
+      /*41. Escreva um programa que imprima todos os números inteiros do intervalo fechado de 1 a
+        100.*/
+      function intervaloNumerico() {
+        //var valor = parseInt(prompt("Informe um valor: "));
+
+        for (var cont = 2; cont < 100; cont++) {
+          console.log(cont);
+        }
+      }
+
+      //intervaloNumerico();
+
+      /*42. Escreva um programa que imprima todos os números inteiros de 100 a 1 (em ordem
+        decrescente).*/
+      function ordemDecrescente() {
+        //debugger;
+        for (cont = 100; cont >= 1; cont--) {
+          console.log(cont);
+        }
+      }
+
+      //ordemDecrescente();
+
+      /*44. Escreva um programa que imprima todos os números de 1 até 100, inclusive, e a soma
+        de todos eles.*/
+      function somaDeUmaCem() {
+        // debugger;
+        var cont1,
+          cont2,
+          soma = 0;
+        for (cont1 = 1; cont1 <= 100; cont1++) {
+          console.log(cont1);
+          soma = soma + cont1;
+        }
+        console.log(cont1 + " + " + cont2 + " = " + soma);
+      }
+      //somaDeUmaCem();
+
+      /*45. Escreva um programa que leia 5 números, e imprima a média entre eles.*/
+      function mediaCincoNumeros() {
+        debugger;
+        var numeros = [];
+        var soma, divisao;
+
+        for (var cont = 1; cont <= 5; cont++) {
+          var valores = parseInt(prompt("Informe o " + cont + "º valor."));
+          numeros.push(valores);
+          soma = numeros[0] + numeros[1] + numeros[2] + numeros[3] + numeros[4];
+        }
+        divisao = soma / 5;
+        alert("A média é: " + divisao);
+      }
+      //var numeros = mediaCincoNumeros();
+
+      //não finalizado
+      /*46. Escreva um programa que calcule o quociente da divisão de A por B (número inteiros e
+      positivos), ou seja, A / B, através de subtrações sucessivas. Esses dois valores são
+      passados pelo usuário através do teclado.*/
+      function divisaoSubtracaoSucessiva() {
+        var numeros = [];
+        var divisao;
+
+        for (cont = 1; cont <= 2; cont++) {
+          var valor = parseFloat(prompt("Informe o " + cont + "º valor"));
+          numeros.push(valor);
+
+          divisao = numeros[0] / numeros[1];
+        }
+        alert("O resultado da divisão é: " + divisao);
+      }
+      //divisaoSubtracaoSucessiva();
+
+      //não finalizado
+      /*47. Escreva um programa que calcule o resto da divisão de A por B (número inteiros e
+        positivos), ou seja, A % B, através de subtrações sucessivas. Esses dois valores são
+        passados pelo usuário através do teclado.*/
+      function restoDivisao() {
+        var valores = [];
+        for (cont = 1; cont <= 2; cont++) {
+          var numero = parseInt(prompt("Informe o " + "º" + cont + " valor"));
+          valores.push(numero);
+
+          var resto = valores[0] % valores[1];
+        }
+        alert("O resto da divisão é: " + resto);
+      }
+
+      //restoDivisao();
+
+      /*48. Escreva um programa que determine se um dado número N (digitado pelo usuário) é
+        primo ou não.*/
+
+      /*50. Escreva um programa que leia um valor e imprima todas as possíveis combinações em
+        que o lançamento de um par de dados tenha como resultado da soma dos valores dos
+        dados o número lido. Por exemplo, se a entrada for o número 7, o programa deve
+        imprimir as seguintes combinações:
+        • 1 6
+        • 2 5
+        • 3 4
+        • 4 3
+        • 5 2
+        • 6 1*/
+
+      /*51. A série de Fibonacci é formada pela sequencia:
+      • 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+      Escreva um programa que gere a série de FIBONACCI até o N-ésimo termo (com N
+      sendo uma entrada do algoritmo).*/
+
+      /*let conta = 0;
+        do {
+            let nome = String(prompt("Informe o seu nome: "));
+            let senha = String(prompt("Informe a sua senha: "));
+
+            if(senha == nome) {
+                alert("A senha deve ser diferente do usuário");
+            }
+        } while(conta <= 10);*/
+
+      /*
+        3.Faça um programa que leia e valide as seguintes informações:
+        Nome: maior que 3 caracteres;
+        Idade: entre 0 e 150;
+        Salário: maior que zero;
+        Sexo: 'f' ou 'm';
+        Estado Civil: 's', 'c', 'v', 'd';
+        Dica: se sua variável é texto, o tamanho dela está armazenado em: texto.length
+
+        let nome = String(prompt("Informe o seu nome: "));
+        if (nome.length < 3){
+            alert("O nome dever ter mais de " + nome.length + " caracteres");
+        }
+
+        let idade = String (prompt("Informe a sua idade: "));
+        if(idade < 0 || idade > 150){
+            alert("A idade deve ser maior ou igual a zero ou menor ou igual há 150.");
+        }
+
+        let salario = parseFloat(prompt("Informe o seu salário: "));
+        if (salario <= 0){
+            alert("O salário deve ser maior que 0");
+        }
+
+        let sexo = String(prompt("Inform o sexo [F] Feminino ou [M] Masculino"));
+        if (sexo != "f" || sexo != "m"){
+            alert("O sexo deve ser informado com [f] ou [m]");
+        }
+
+        let estadoCivil = String(prompt("Estado civil: [S], [C], [V] ou [D]"));
+        if (estadoCivil != "s" || estadoCivil != "c"
+        || estadoCivil != "v" || estadoCivil != "d"){
+            alert("O estado civil deve ser informado com [s], [c], [v] ou [d]");
+        }
+        */
+
+      /*4.Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual de crescimento de 3%
+        e que a população de B seja 200000 habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e escreva
+        o número de anos necessários para que a população do país A ultrapasse ou iguale a população do país B,
+        mantidas as taxas de crescimento.*/
+
+      /*5.Altere o programa anterior permitindo ao usuário informar as populações e
+        as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.*/
+
+      /*6.Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro.
+        Depois modifique o programa para que ele mostre os números um ao lado do outro.*/
+      /* for (let conta = 1; conta <= 20; conta++){
+            console.log(conta);
+        }
+
+        for (let conta = 1; conta <= 20; conta++){
+            document.write(conta);
+        }*/
+
+      /*
+        //7.Faça um programa que leia 5 números e informe o maior número.
+        // Função para encontrar o maior número entre os fornecidos
+        do {
+            var continua = "não";
+            function encontrarMaiorNumero(numeros) {
+            let maiorNumero = numeros[0];
+
+                for (let i = 1; i < numeros.length; i++) {
+                    if (numeros[i] > maiorNumero) {
+                        maiorNumero = numeros[i];
+                    }
+                }
+
+                return maiorNumero;
+            }
+
+            // Função principal para ler 5 números e informar o maior
+            function encontrarEMostrarMaiorNumero() {
+                let numeros = [];
+
+                // Lê 5 números
+                for (let i = 1; i <= 5; i++) {
+                    let numero = parseFloat(prompt("Informe o " + i + "º número:"));
+                    numeros.push(numero);
+                }
+
+                // Encontra o maior número
+                let maiorNumero = encontrarMaiorNumero(numeros);
+
+                // Mostra o resultado
+                alert("O maior número é: " + maiorNumero);
+            }
+
+            // Chama a função principal
+            encontrarEMostrarMaiorNumero();
+
+            continua = (prompt("Deseja continuar?"));
+
+        }while(continua == "sim");*/
+
+      /*8.Faça um programa que leia 5 números e informe a soma e a média dos números.
+        do {
+            var continua = "não";
+            let soma = 0;
+
+            for(let i = 1; i <= 5; i++){
+                var valores = Number(prompt("Informe o valor: " + i));
+                soma += valores;
+            }
+
+            //soma = soma + valores;
+            let media = soma / 5;
+
+            alert("Soma: " + soma);
+            alert("Média: " + media);
+
+            continua = (prompt("Deseja continuar?"));
+
+        }while(continua == "sim");*/
+
+      /*9.Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+        //debugger;
+        let valores = 50;
+        var divisores;
+        for (let i = 1; i <= 50; i++){
+             divisores = valores / 2;
+            if(valores / 2 == 0){
+                alert("Par: " + valores);
+            }
+            else if(valores / 2 == 1){
+                alert("Impar: " + valores);
+            }
+        }*/
+
+      /*10.Faça um programa que receba dois números inteiros e gere os números
+        inteiros que estão no intervalo compreendido por eles.
+        var valor1 = Number(prompt("Informe o 1 valor: "));
+        var valor2 = Number(prompt("Informe o 2 valor: "));
+        var menor;
+        var maior;
+        //debugger
+        // verifica qual dos números é o menor e o maior
+        if(valor1 < valor2){
+            menor = valor1;
+            maior = valor2;
+        }
+        else {
+            menor = valor2;
+            maior = valor1;
+        }
+
+        //Gera os números inteiros no intervalo entre o menor e o maior
+        alert("Números Inteiros no Intervalo:");
+        for(var i = menor + 1; i < maior; i++){
+            alert(i);
+        }*/
+
+      /*11.Altere o programa anterior para mostrar
+        no final a soma dos números.
+        var valor1 = Number(prompt("Informe o 1 valor: "));
+        var valor2 = Number(prompt("Informe o 2 valor: "));
+        var menor;
+        var maior;
+        //debugger
+        // verifica qual dos números é o menor e o maior
+        if(valor1 < valor2){
+            menor = valor1;
+            maior = valor2;
+
+            soma = menor + maior;
+        }
+        else {
+            menor = valor2;
+            maior = valor1;
+
+            soma = menor + maior;
+        }
+
+        //Gera os números inteiros no intervalo entre o menor e o maior
+        console.log("Números Inteiros no Intervalo:");
+        for(var i = menor + 1; i < maior; i++){
+            console.log(i);
+        }
+        console.log("Valores informados: " + menor + " e " + maior);
+        console.log("Resultado da soma: " + soma);*/
+
+      /*12.Desenvolva um gerador de tabuada, capaz de gerar a tabuada de
+        qualquer número inteiro entre 1 a 10. O usuário deve informar de qual
+        numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
+
+        Tabuada de 5:
+        5 X 1 = 5
+        5 X 2 = 10
+        ...
+        5 X 10 = 50
+
+        let valor = Number(prompt("Informe o valor: "));
+        let recebe;
+        for(cont = 1; cont <= 10; cont++){
+            recebe = valor * cont;
+
+            console.log(valor + " * " + cont + " = " + recebe);
+        }*/
+
+      /*13. Faça um programa que peça dois números, base e expoente,
+        calcule e mostre o primeiro número elevado ao segundo número.
+        Não utilize a função de potência da linguagem.
+        var resultado = 1;
+        var base = Number(prompt("Informe a base: "));
+        var expoente = Number(prompt("Inforem o expoente: "));
+
+        for(let i = 0; i < expoente; i++){
+            resultado = base ** expoente;
+        }
+
+        console.log("O resultado é: " + resultado);*/
+
+      /*14.Faça um programa que peça 10 números inteiros, calcule e mostre a
+        quantidade de números pares e a quantidade de números ímpares.
+        var par = 0;
+        var impar = 0;
+        for(var i = 1; i <= 10; i++){
+
+            let valor = Number(prompt("Informe o " + (i) + "° número inteiro:"));
+
+            if(valor % 2 == 0){
+                impar = valor + 1;
+                console.log("Impar: " + impar);
+            }
+            else{
+                par = valor + 1;
+                console.log("Par: " + par);
+            }
+        }*/
+
+      /*15.A série de Fibonacci é formada pela sequência 1,1,2,3,5,8,13,21,34,55,...
+        Faça um programa capaz de gerar a série até o n−ésimo termo.
+        function fibonacci(){
+            var numero, penultimo = 0, ultimo = 1;
+            for(i = 3; i <= 10; i++){
+                numero = ultimo + penultimo;
+                penultimo = ultimo;
+                ultimo = numero;
+                console.log(ultimo);
+            }
+        }
+
+        fibonacci();*/
+
+      // PRATICA DO CONTEÚDO VISTO ATÉ AQUI
+      // arrais
+      /*01. Crie uma função que recebe um array de 2 números e
+        coloque eles em ordem crescente. Não use o método sort.
+        function ordenarNumeros(arr){
+          //arr = [];
+          if (arr[0] > arr[1]){
+            // Se o primeiro número for maior que o segundo, troque-os de lugar
+            var temp = arr[0];
+            arr[0] = arr[1];
+            arr[1] = temp;
+          }
+          // Não é necessário retornar, pois a matriz é passada
+          // por referência e é modificada diretamente
+        }
+
+        //retorno
+        var numeros = [8, 5];
+        ordenarNumeros(numeros);
+        console.log(numeros);*/
+
+      /*02. Crie uma função que recebe um array de 3 números e coloque eles
+        em ordem crescente. Crie sua própria função para isso.
+        function ordenacao(array){
+            // Verifica se o primeiro numero for maior que o segundo, se sim, troque-os de lugar
+          if(array[0] > array[1]){
+            var temp = array[0];
+            array[0] = array[1];
+            array[1] = temp;
+          }
+          // Verifica se o segundo número é maior que o terceiro, se sim, troque os de lugar
+          if(array[1] > array[2]){
+            var temp = array[1];
+            array[1] = array[2];
+            array[2] = temp;
+          }
+
+          //if(array[2] > array[3]){
+          //var temp = array[2];
+          //array[2] = array[3];
+          //array[3] = temp;
+
+          // Verifica novamente se o primeiro número maior que o segundo, se sim, troque os de lugar
+          if(array[0] > array[1]){
+            var temp = array[0];
+            array[0] = array[1];
+            array[1] = temp;
+          }
+          // não é necessário retornar, pois a matriz é passada
+          // por referênca e é modificada diretamente
+        }
+
+        // retorno
+        var numeros = [3, 8, 1];
+        ordenacao(numeros);
+        console.log(numeros);*/
+
+      /*03. Crie um script que pergunte 3 números ao usuário, coloque em um array, depois exiba tal array.
+          Modifique os elementos do array de modo a a sequência de números ficar do contrário.
+          Ou seja, se digitou: 1,2,3
+          Vai aparecer: 3,2,1
+          function invertendoNumeros(){
+          debugger;
+            // Solicita ao usuário para inserir três números separados por virgula
+            var entrada = prompt("Digite três números separados por vírgula:");
+
+            // Divide a entrada em um array de strings
+            var numerosString = entrada.split(',');
+
+            // Converte os números de strings para números inteiros
+            var numeros = numerosString.map(function(num){
+              return parseInt(num);
+            });
+
+            // Exibe o array original
+            console.log("Array original: " + numeros);
+
+            // Inverte a sequência de números no array
+            var inverso = [];
+            for(var i = numeros.length - 1; i >= 0; i--){
+              inverso.push(numeros[i]);
+            }
+
+            // Exibe o array invertido
+            console.log("Array invertido: " + inverso);
+
+          }
+          invertendoNumeros();*/
+
+      /*04. Refaça o script anterior, mas agora pergunte ao usuário quantos números ele deseja inserir no array.
+          Depois, o usuário vai preenchendo elemento por elemento do vetor.
+          Ao final, exiba o array e o array ao contrário (generalização do script anterior).*/
+
+      /*function inverso(){
+            var entrada = [];
+            entrada = (prompt("Informe a quantidade de valores"));
+
+            for(cont = 1; cont <= entrada; cont++){
+              var entrada = prompt("Informe o " + cont + "° valor");
+              console.log("Vaores em ordem original: " + entrada);
+            }
+
+            // divide a entrada em um array de strings
+            var numeroString = entrada.split(',');
+
+            //converte os números de strings para números inteiros
+            var numeros = numeroString.map(function(nums){
+              return parseInt(nums);
+            });
+
+            //exibe o array origiginal
+            console.log("valores Originais: " + numeros);
+
+            //inverte a sequência de números no array
+            var inverso = [];
+            for(var i = numeros.length - 1; i >= 0; i--){
+              inverso.push(numeros[i]);
+            }
+
+            //exibe o array invertido
+            console.log("Array invertido: " + inverso);
+          }
+          inverso();*/
+
+      /*05. Faça uma função que recebe um array de qualquer tamanho e ordene seus elementos na ordem crescente.
+          Faça sua função na mão, não invoque nenhum método de sorting. Dica: pesquise sobre bubble sort.
+          let bubble = [10,9,8,7,6,5,4,3,2,1];
+          function bubbleSort(){
+            for(let i = 0; i < bubble.length; i++){
+              if(bubble[i] > bubble[i + 1]){
+                let v1 = bubble[i];
+                let v2 = bubble[i + 1];
+                bubble[i] = v2;
+                bubble[i + 1] = v1;
+              }
+            }
+          }
+
+      for (let j = 0; j < bubble.length; j++){
+        bubbleSort();
+      }
+
+      console.log(bubble);
+      bubbleSort();*/
+
+      /*06. Crie uma função que recebe um vetor e um número.
+       Ela deve mostrar todos os índices onde esse número aparece no vetor, e não só apenas o primeiro e/ou
+       último índice em que o número aparece (como nos métodos indexOf e lastIndexOf).*/
+
+      /*07. Crie um script que pede um inteiro positivo para o usuário.
+      Em seguida, popule uma array com os números de Fibonacci,
+      na hora de somar com os termos anteriores, some com elementos anteriores do array.*/
+
+      //close();
+    </script>
+
+    <center>
+      <h1>Capítulo 1 - Introdução</h1>
+      <hr />
+      <hr />
+    </center>
+
+    <p>
+      A idéia é trazer informações sobre práticas diáriaso para a educação
+      sociemocional em casa.
+    </p>
+    <p>Novo parágrafo refere-se ás técnicas para isso.</p>
+
+    <center>
+      <h2>Capítulo 2 - Fundamentação Teórica</h2>
+    </center>
+
+    <ul>
+      <li style="font-size: 40px">C#</li>
+      <img
+        src="Images/csharp.webp"
+        alt="Logo C#."
+        width="100px"
+        height="120px"
+      />
+      <br />
+      <br />
+      <li style="font-size: 40px">Java</li>
+      <img
+        src="Images/java.png"
+        alt="Logo Java."
+        width="120px"
+        height="150px"
+      />
+      <li style="font-size: 40px">PHP</li>
+      <img src="Images/php.png" alt="Logo PHP." width="150px" height="120px" />
+      <li style="font-size: 40px">Ruby</li>
+      <img src="Images/ruby.jpeg" alt="Logo Ruby." width="120px" height="110" />
+    </ul>
+
+    <ol>
+      <li>Capítulo 1</li>
+      <li>Capítulo 2</li>
+      <li>Capítulo 3</li>
+      <li>Capítulo 4</li>
+    </ol>
+  </body>
+</html>

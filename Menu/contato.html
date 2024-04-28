@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <!--18 | Criando camadas de estilo com HTML e CSS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <h1>Contato</h1>
+    </div>
+    <!--Aula 20 Forms-->
+    <!--Aula 22 | Form action - html txt file-->
+
+    <!--O atributo action define o local (uma URL) em que os 
+    dados recolhidos do formuário devbem ser enviados.
+    O atributo method define qual o método HTTP para enviar os 
+    dados (ele pode ser "GET" ou "POST". O formulário HTML 5 só dá
+    suporte a esses dois métodos.-->
+    <form
+      action="destino.html"
+      method="GET"
+      autocomplete="on"
+      enctype="text/plain"
+      name="contato"
+    >
+      <div>
+        <label for="email">E-mail</label>
+        <!--for é uma meneira para vincular uma label à um 
+        campo do formulário. Ele faz referência ao id do campo correspondente-->
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Digite o seu e-mail."
+        />
+      </div>
+
+      <div>
+        <label for="email">E-mail com valor padrão</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="rosi.volgarin@gmail.com"
+        />
+      </div>
+
+      <div>
+        <label for="uf">Unidade da Federação</label>
+        <input type="radio" name="uf" value="SP" /> SP
+        <input type="radio" name="uf" value="MG" checked /> MG
+        <input type="radio" name="uf" value="RJ" /> RJ
+        <input type="radio" name="uf" value="ES" /> ES
+      </div>
+
+      <fieldset>
+        <legend>Informe onde comprou o produto</legend>
+        <ul>
+          <li>
+            <input
+              type="checkbox"
+              id="online"
+              name="online"
+              value="Loja Online"
+            />
+            <label for="online">Loja Online</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              id="fisica"
+              name="fisica"
+              value="Loja Física"
+            />
+            <label for="fisica">Loja Física</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              id="revendedor"
+              name="revendedor"
+              value="Revendedor"
+            />
+            <label for="revendedor">Revendedor</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <div>
+        <textarea
+          name="mesagem"
+          cols="93"
+          rows="10"
+          placeholder="
+        Escreva a sua mensagem!"
+          required
+        ></textarea>
+      </div>
+
+      <div>
+        <label for="password">Informe a senha</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Informe a senha"
+        />
+      </div>
+
+      <div>
+        <label for="tipo">Tipo de Mensagem</label>
+        <select name="tipo" id="tipo" required>
+          <option selected disabled value="">Selecione</option>
+          <option value="sugestao">Sugestão</option>
+          <option value="critica">Crítica</option>
+          <option value="elogio">Elogio</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <label for="arquivo"></label>
+        <input
+          type="file"
+          name="arquivo"
+          id="arquivo"
+          accept="image/*"
+          multiple
+        />
+      </fieldset>
+
+      <button type="submit" name="submit">Confirmar</button>
+    </form>
+  </body>
+</html>
