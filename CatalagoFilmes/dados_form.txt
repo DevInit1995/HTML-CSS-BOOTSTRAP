@@ -1,0 +1,1 @@
+http://127.0.0.1:5500/HTML-CSS-BOOTSTRAP/CatalagoFilmes/destino.html?email=kennedyalves871%40gmail.com&email=exemple%40gmail.com&uf=SP&online=Loja+Online&mesagem=Teste&password=jfjfjf&tipo=sugestao&arquivo=&submit=
