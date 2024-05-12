@@ -26,59 +26,61 @@
 
     <!--Aula 20 Forms-->
     <form
-      action="destino.html"
-      method="GET"
-      autocomplete="on"
-      enctype="text/plain"
-      name="contato"
+      action="https://sheetdb.io/api/v1/w7wobyg5611ae"
+      method="POST"
+      name="FormContatoFilme"
     >
       <div>
         <label for="email">E-mail</label>
         <input
           type="email"
-          name="email"
+          name="data[email]"
           id="email"
           placeholder="Digite o seu e-mail."
         />
       </div>
 
       <div>
-        <label for="email">E-mail com valor padrão</label>
-        <input type="email" name="email" id="email" value="exemple@gmail.com"
-        />
-      </div>
-
-      <div>
         <label for="uf">Unidade da Federação</label>
-        <input type="radio" name="uf" value="SP" /> SP
-        <input type="radio" name="uf" value="MG" /> MG
-        <input type="radio" name="uf" value="RJ" /> RJ
-        <input type="radio" name="uf" value="ES" /> ES
+        <input type="radio" name="data[uf]" value="SP" checked> SP
+        <input type="radio" name="data[uf]" value="MG" /> MG
+        <input type="radio" name="data[uf]" value="RJ" /> RJ
+        <input type="radio" name="data[uf]" value="ES" /> ES
       </div>
 
       <fieldset>
         <legend>Informe onde comprou o produto.</legend>
         <ul>
           <li>
-            <input type="checkbox" id="online" name="online" value="Loja Online"/>
-            <label for="online">Loja Online</label>
+            <input type="checkbox" name="data[local_compra]" value="Loja Online"/>
+            <label for="loja_online">Loja Online</label>
           </li>
 
           <li>
-            <input type="checkbox" id="revendedor" name="revendedor" value="Revendedor"/>
-            <label for="fisica">Loja Física</label>
+            <input type="checkbox" name="data[local_compra]" value="Loja Física"/>
+            <label for="loja_fisica">Loja Física</label>
           </li>
 
           <li>
-            <input type="checkbox" id="revendedor" name="revendedor" value="Revendedor"/>
+            <input type="checkbox" name="data[local_compra]" value="Revendedor"/>
             <label for="revendedor">Revendedor</label>
           </li>
         </ul>
       </fieldset>
 
       <div>
+        <label for="tipo">Tipo de Mensagem</labe>
+        <select name="data[tipo_mensagem]" id="tipo" required>
+          <option selected disabled value="Sugestão"></option>
+          <option value="Sugestão">Sugestão</option>
+          <option value="Crítica">Crítica</option>
+          <option value="Elogio">Elogio</option>
+        </select>
+      </div>
+
+      <div>
         <textarea
-          name="mesagem"
+          name="data[mensagem"]
           cols="100"
           rows="10"
           placeholder="
@@ -87,27 +89,23 @@
         ></textarea>
       </div>
 
-      <div>
-        <label for="password">Informe a senha</label>
-        <input type="password" name="password" placeholder="Informe a senha" />
-      </div>
-
-      <div>
-        <label for="tipo-mensagem">Tipo de Mensagem</label>
-        <select name="tipo" id="tipo" required>
-          <option selected disabled value="">Selecione</option>
-          <option value="sugestao">Sugestão</option>
-          <option value="critica">Crítica</option>
-          <option value="elogio">Elogio</option>
-        </select>
-      </div>
-
-      <fieldset>
-        <label for="arquivo"></label>
-        <input type="file" name="arquivo" id="arquivo" accept="image/*" multiple/>
-      </fieldset>
-
       <button type="submit" name="submit">Confirmar</button>
     </form>
+    <script>
+      var form = document.getElementById('FormContatoFilme');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("FormContatoFilme")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          alert('success')
+        });
+      });
+    </script>
+    
   </body>
 </html>

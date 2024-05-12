@@ -30,11 +30,9 @@
     dados (ele pode ser "GET" ou "POST". O formulário HTML 5 só dá
     suporte a esses dois métodos.-->
     <form
-      action="destino.html"
-      method="GET"
-      autocomplete="on"
-      enctype="text/plain"
-      name="contato"
+      action="https://sheetdb.io/api/v1/afwdq7i2wq3gz"
+      method="POST"
+      name="FormContato"
     >
       <div>
         <label for="email">E-mail</label>
@@ -42,28 +40,18 @@
         campo do formulário. Ele faz referência ao id do campo correspondente-->
         <input
           type="email"
-          name="email"
+          name="data[email]"
           id="email"
           placeholder="Digite o seu e-mail."
         />
       </div>
 
       <div>
-        <label for="email">E-mail com valor padrão</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value="rosi.volgarin@gmail.com"
-        />
-      </div>
-
-      <div>
         <label for="uf">Unidade da Federação</label>
-        <input type="radio" name="uf" value="SP" /> SP
-        <input type="radio" name="uf" value="MG" checked /> MG
-        <input type="radio" name="uf" value="RJ" /> RJ
-        <input type="radio" name="uf" value="ES" /> ES
+        <input type="radio" name="data[uf]" value="SP" checked> SP
+        <input type="radio" name="data[uf]" value="MG" checked /> MG
+        <input type="radio" name="data[uf]" value="RJ" /> RJ
+        <input type="radio" name="data[uf]" value="ES" /> ES
       </div>
 
       <fieldset>
@@ -72,28 +60,25 @@
           <li>
             <input
               type="checkbox"
-              id="online"
-              name="online"
-              value="Loja Online"
-            />
-            <label for="online">Loja Online</label>
-          </li>
-
-          <li>
-            <input
-              type="checkbox"
-              id="fisica"
-              name="fisica"
+              name="data[local_compra]"
               value="Loja Física"
             />
-            <label for="fisica">Loja Física</label>
+            <label for="loja_fisica">Loja Física</label>
           </li>
 
           <li>
             <input
               type="checkbox"
-              id="revendedor"
-              name="revendedor"
+              name="data[local_compra]"
+              value="Loja Online"
+            />
+            <label for="loja_online">Loja Online</label>
+          </li>
+
+          <li>
+            <input
+              type="checkbox"
+              name="data[local_compra]"
               value="Revendedor"
             />
             <label for="revendedor">Revendedor</label>
@@ -102,8 +87,18 @@
       </fieldset>
 
       <div>
+        <label for="tipo">Tipo de Mensagem</label>
+        <select name="data[tipo_mensagem]" id="tipo" required>
+          <option selected disabled value="">Selecione</option>
+          <option value="sugestao">Sugestão</option>
+          <option value="critica">Crítica</option>
+          <option value="elogio">Elogio</option>
+        </select>
+      </div>
+
+      <div>
         <textarea
-          name="mesagem"
+          name="data[mensagem]"
           cols="93"
           rows="10"
           placeholder="
@@ -112,38 +107,24 @@
         ></textarea>
       </div>
 
-      <div>
-        <label for="password">Informe a senha</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Informe a senha"
-        />
-      </div>
-
-      <div>
-        <label for="tipo">Tipo de Mensagem</label>
-        <select name="tipo" id="tipo" required>
-          <option selected disabled value="">Selecione</option>
-          <option value="sugestao">Sugestão</option>
-          <option value="critica">Crítica</option>
-          <option value="elogio">Elogio</option>
-        </select>
-      </div>
-
-      <fieldset>
-        <label for="arquivo"></label>
-        <input
-          type="file"
-          name="arquivo"
-          id="arquivo"
-          accept="image/*"
-          multiple
-        />
-      </fieldset>
-
       <button type="submit" name="submit">Confirmar</button>
     </form>
+
+    <script>
+      let form = document.getElementById('FormContato');
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("FormContato")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+          // you can put any JS code here
+          alert('success')
+        });
+      });
+    </script>
+    
   </body>
 </html>
