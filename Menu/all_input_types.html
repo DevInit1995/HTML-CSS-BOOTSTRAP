@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 All Input Types</title>
+    <link rel="stylesheet" href="all_input_types.css">
+</head>
+<body>
+    <div class="form-box">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="contato-api.html">Contato Enviar</a></li>
+                <li><a href="all_input_types.html">HTML5 Input Types</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <h1>HTML5 Input Types</h1>
+        </div>
+
+        <form 
+            action="https://sheetdb.io/api/v1/eqf7bc8m52ouk"
+            method="POST"
+            name="InputType">
+
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" multiple name="data[email]" id="email"
+                placeholder="Informe o seu e-mail">
+            </div>
+
+            <div>
+                <label for="imagem">Imagens</label>
+                <input type="file" multiple name="data[imagem]" id="imagem" accept=".jpg, .jpeg,
+                .png, .svg, .gif"
+                placeholder="Anexar imagens">
+            </div>
+
+            <div>
+                <label for="anexo">Arquivos</label>
+                <input type="file" multiple name="data[anexo]" id="anexo" accept=".txt"
+                placeholder="Anexar arquivos texto">
+            </div>
+
+            <div>
+                <label for="search">Buscar</label>
+                <input type="search" id="search" name="data[search]">
+            </div>
+
+            <div>
+                <label for="tel">Telefone</label>
+                <input type="tel" id="tel" name="data[tel]"
+                pattern="[0-9]{2}-[0-9]{5}-[0-9][4]"
+                placeholder="Adote e formato 11-96454-9999">
+            </div>
+
+            <div>
+                <label for="url">URL</label>
+                <input type="url" id="url" name="data[url]">
+            </div>
+
+            <div>
+                <label for="idade">Idade</label>
+                <input type="number" name="data[idade]" id="idade" min="0" max="120" step="1">
+            </div>
+
+            <div>
+                <label for="preco">Escolha o preço máximo</label>
+                <input type="range" name="data[preco]" id="preco"
+                min="500" max="900" step="100"
+                value="2500">
+            </div>
+
+            <div>
+                <label for="datetime-local">Data e hora(datetime-local)</label>
+                <input type="datetime-local" name="data[datetime-local]" id="datetime-local">
+            </div>
+
+            <div>
+                <label for="month">Mês</label>
+                <input type="month" name="data[month]" id="month">
+            </div>
+
+            <div>
+                <label for="time">Hora</label>
+                <input type="time" name="data[time]" id="time">
+            </div>
+
+            <div>
+                <label for="week">Semana</label>
+                <input type="week" name="data[week]" id="week">
+            </div>
+
+            <div>
+                <label for="color">Cor</label>
+                <input type="color" name="data[color]" id="color">
+            </div>
+
+            <button type="submit" name="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
