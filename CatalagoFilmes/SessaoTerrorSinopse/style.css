@@ -42,12 +42,13 @@ form div {
 
 .titulo {
   margin: 0 0 auto 0;
-  font-size: 30px;
+  font-size: 35px;
   width: auto;
   display: flex;
   justify-content: center;
   background-color: darkgray;
   border-radius: 15px;
+  color: white;
 }
 
 .wrapper {
