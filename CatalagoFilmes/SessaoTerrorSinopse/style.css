@@ -155,6 +155,20 @@ footer {
   font-style: normal;
 }
 
+/*estilizando a tabela*/
+.style-table, th, td {
+  background-color: #eee; /*cor interna*/
+  border: 4px solid rgb(160 160 160); /*cor e espessura da borda*/
+  border-collapse: collapse; /*define a separação entre as bordar*/
+  text-align: center; /*centraliza o texto*/
+}
+
+th {
+  background-color: rgb(160 160 160);; /*cor coluna*/
+}
+
+
+
 /* Aula 21 Forms-PT.2*/
 /*Complemento do style.css para o FORMS*/
 
@@ -199,3 +213,4 @@ legend {
 button {
   margin-top: 1em;
 }
+
