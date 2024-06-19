@@ -166,6 +166,43 @@ legend {
   color: #fff;
 }
 
-button {
+button[type="submit"] {
   margin-top: 1em;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgb(219, 40, 79);
+  background-color: rgb(194, 231, 156);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: .3s ease background-color;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(229, 250, 113);
+}
+
+footer {
+  background-color: crimson;
+  height: 100px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  letter-spacing: 2px;
+  vertical-align: center;
+  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif Haettenschweiler,
+  'Arial Narrow Bold', sans-serif, 'Times New Roman', Times, serif;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a:hover {
+  color: #eafa10; /*muda a cor a depender da posição*/
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jhon Santos">
+    <meta name="description" content="Aula Seletores e Combinadores">
+    <link rel="stylesheet" href="folha_de_estilo.css">
+    <title>Seletores e Combinadores</title>
+</head>
+<!--27 | Seletores e Combinadores - Pt. 02-->
+<body>
+    <div class="container-painel">
+        <div class="class-area-combinador">
+            <p>
+                Irmão Adjacente
+            </p>
+
+            <p>
+                Lista 1
+            </p>
+
+            <h6>
+                "adjacente" significa "Imediatamente a seguir"
+            </h6>
+
+            <div class="adjacente">
+                <a href="#">Página 1</a><br>
+                <a href="#">Página 2</a><br>
+                <a href="#">Página 3</a><br>
+            </div>
+
+            <a href="#">Página 4</a><br>
+            <a href="#">Página 5</a><br>
+            <a href="#">Página 6</a><br>
+        </div>
+
+        <div class="class-area-combinador">
+            <p>
+                Irmão Geral
+            </p>
+            <p>
+                Lista 2
+            </p>
+
+            <h6>
+                Combina todas as iterações do segundo elemento
+            </h6>
+
+            <div class="irmao_geral">
+                <a href="#">Página 1</a><br>
+                <a href="#">Página 2</a><br>
+                <a href="#">Página 3</a><br>
+            </div>
+
+            <a href="#">Página 4</a><br>
+            <a href="#">Página 5</a><br>
+            <a href="#">Página 6</a><br>
+        </div>
+
+        <div class="class-area-combinador">
+            <p>
+                Filho
+            </p>
+
+            <p>
+                Lista 3
+            </p>
+
+            <h6>
+                Todos os elementos que são os filhos imediatos
+            </h6>
+
+            <div class="filho">
+                <a href="#">Página 1</a><br>
+                <a href="#">Página 2</a><br>
+
+                <div>
+                    <a href="#">Página 3</a>
+                </div>
+            </div>
+
+            <a href="#">Página 4</a><br>
+            <a href="#">Página 5</a><br>
+            <a href="#">Página 6</a><br>
+        </div>
+
+        <div class="class-area-combinador">
+            <p>
+                Descendente
+            </p>
+
+            <p>
+                Lista 4
+            </p>
+
+            <h6>
+                Elementos descendentes do elemento especificado.
+            </h6>
+
+            <div class="descendente">
+                <a href="#">Página 1</a><br>
+                <a href="#">Página 2</a><br>
+                <a href="#">Página 3</a><br>
+            </div>
+
+            <a href="#">Página 4</a><br>
+            <a href="#">Página 5</a><br>
+            <a href="#">Página 6</a><br>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
