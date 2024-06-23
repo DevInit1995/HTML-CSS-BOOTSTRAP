@@ -169,7 +169,59 @@ th {
   height: 40px /*altura da coluna*/;
 }
 
+/*Seletores de atributos - LINKS*/
+/*links com final ".html"
+a[href$=".html"] {
+  background-color: red;
+}
+*/
 
+/*links com "contato" em qualquer lugar da URL,
+independentemente da capitalização*
+a[href*="contato" i]{
+  background-color: cyan;
+}
+/
+
+/*links com "bio" em qualquer lugar da URL
+a[href*="bio"]{
+  background-color: silver;
+}
+*/
+
+/*links internos, começando com "#"
+a[href^="#"] {
+  background-color: gold;
+}
+*/
+
+/*Seletores de atributos - Linguagens*/
+
+/*Todas divs com um atributo `lang` em negrito.*/
+div[lang] {
+  font-weight: bold;
+}
+
+/*todas divs com US English e azul (blue).*/
+div[lang~="en-us"] {
+  color: blue;
+}
+
+/*Todas divs onde Portuguese esta em verde (green)*/
+div[lang="pt"] {
+  color: green;
+}
+
+/*Todas divs onde Chinese esta em vermelho (red), Simplicado para (zh-CH) ou tradicional (zh-TW)*/
+div[lang|="zh"] {
+  color: red;
+}
+
+/*todas divs com traditional chinese `data-lang` que é purple.*/
+/*Nota: Você também poderia usar atributos separados por hífen com aspas duplas*/
+div[data-lang="zh-TW"] {
+  color: purple;
+}
 
 /* Aula 21 Forms-PT.2*/
 /*Complemento do style.css para o FORMS*/
