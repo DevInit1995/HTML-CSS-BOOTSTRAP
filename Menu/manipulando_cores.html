@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jhon Santos">
+    <meta name="description" content="Manipulando Cores no CSS">
+    <title>Manipulando Cores</title>
+</head>
+<body>
+    <div class="container-painel">
+        <div class="classe-area-cor1">
+            <p>texto</p>
+        </div>
+
+        <div class="classe-area-cor2">
+            <p>texto</p>
+        </div>
+
+        <div class="classe-area-cor3">
+            <p>texto</p>
+        </div>
+
+        <div class="classe-area-cor4">
+            <p>texto</p>
+        </div>
+    </div>
+
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+        .container-painel {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(110, 109, 110);
+            color: white;
+        }
+
+        .classe-area-cor1 {
+            align-self: stretch;
+            margin: 1rem .5rem 1rem .5rem;
+            padding: 3rem;
+            border-radius: 1rem;
+            background-color: gold;
+            box-shadow: 0px 4px 0px rgb(94, 73, 6);
+        }
+
+        .classe-area-cor2 {
+            align-self: stretch;
+            margin: 1rem .5rem 1rem .5rem;
+            padding: 3rem;
+            border-radius: 1rem;
+            background-color: hsl(222, 33%, 25%);
+            box-shadow: 0px 4px 0px rgb(13, 158, 194);
+        }
+
+        .classe-area-cor3 {
+            align-self: stretch;
+            margin: 1rem .5rem 1rem .5rem;
+            padding: 3rem;
+            border-radius: 1rem;
+            background-color: hsla(222, 33%, 25%, .55);
+            box-shadow: 0px 4px 0px rgb(241, 233, 233);
+        }
+
+        .classe-area-cor4 {
+            align-self: stretch;
+            margin: 1rem .5rem 1rem .5rem;
+            padding: 3rem;
+            border-radius: 1rem;
+            background-color: #FE6DD7;
+            box-shadow: 0px 4px 0px rgb(151, 151, 151);
+        }
+
+        ul {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        
+        
+
+    </style>
+</body>
+</html>
