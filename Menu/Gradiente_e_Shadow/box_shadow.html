@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jhon Santos">
+    <meta name="description" content="Shadow e Gradiente">
+    <link rel="stylesheet" type="text/css" href="folha_de_estilo_box_shadow.css">
+    <title>Box Shadow</title>
+</head>
+<body>
+    <div class="box">
+        <h1>The box-shadow property</h1>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:300,700');
+
+        body {
+            font-family: 'IBM Plex Sans Condensed', sans-serif;
+            font-size: 1.75rem; /*medida relativa ao tamanho da fonte do elemento raiz*/
+            text-align: center;
+            min-height: center;
+            min-height: 100vh; /*media relativa % do viewport height*/
+            display: grid;
+            place-items: center;
+        }
+
+        h1 {
+           margin: 0;
+        }
+
+        .box {
+            background: white;
+            padding: 2em; /*medida relativa ao tamanho da fonte do elenco*/
+            box-shadow: 100px 100px 200px red,
+                100px -100px 200px blue,
+                -100px -100px 200px green,
+                -100px 100px 200px purple;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente</title>
+</head>
+<body>
+    <div id="gradiente">
+        <h1>Linear-Gradient</h1>
+    </div>
+
+    <br>
+
+    <div id="gradiente-radial">
+        <h1>Radial-Gradient</h1>
+    </div>
+
+    <style>
+        h1 {
+            color: azure;
+        }
+
+        #gradiente {
+            height: 600px;
+            background-color: red; /*for browsers that do not support gradients*/
+            background-image: linear-gradient(to right, red, yellow, red, yellow, green);
+            background-image: linear-gradient(to bottom right, red, yellow, green);
+            background-image: linear-gradient(180deg, red, yellow, green);
+        }
+
+        #gradiente-radial {
+            height: 600px;
+            width: 600px;
+            background-color: red; /*For browsers that do not support gradients*/
+            background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+            background-image: radial-gradient(circle, red, yellow, green);
+        }   
+    </style>
+</body>
+</html>
