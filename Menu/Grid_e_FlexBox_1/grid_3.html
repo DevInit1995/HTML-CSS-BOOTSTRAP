@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Produtos</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+
+        <div class="content-large">
+            <img src="https://p1.pxfuel.com/preview/842/901/98/lily-orange-flowers-plants-botany-garden-green.jpg" alt="Jasmim">
+        </div>
+
+        <div class="content-small">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_629490-CBT44810695664_022021-O.webp" alt="Tulipa">
+        </div>
+
+        <div class="content-small">
+            <img src="https://st.depositphotos.com/2072499/2039/i/600/depositphotos_20398147-stock-photo-flowers.jpg" alt="Rosas Vermelhas">
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li>A Empresa</li>
+                <li>Propósito</li>
+                <li>Fundadores</li>
+                <li>Trabalhe Conosco</li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 95vw;
+            height: 95vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /*1 fração do espaço disponível*/
+            grid-template-rows: 50px 1fr 1fr 100px; /*50 px para o header 100 px para o footer*/
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            letter-spacing: 2px;
+        }
+
+        .container div {
+            padding: 3px;
+            border: 1px solid black;
+          
+        }
+
+        .header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .content-large {
+            grid-row-start: 2;
+            grid-row-end: span 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        ul li {
+            font-weight: lighter;
+            list-style: none; /*para suprimir os bullets da lista*/
+            float: left; /*suprime os espaços à esquerda das palavras que compôem o menu*/
+            text-decoration: none; /*para suprimir o underline do link*/
+            font-size: 1.2rem; /*define os itens do menu com fonte tamanho 14px*/
+            font-family: Arial, Helvetica, sans-serif; /*define a fonte que será utilizada no menu*/
+            color: #1e1e1e; /*define a cor da fonte para as palavras do menu*/
+            padding: 0 20 px; /* px top e botton e 20px (centralizado na barra de navegação e )
+            20px á direita e à esquerda na barra de navegação*/
+            display: block; /*habilita o link em na vertical do bloco*/
+            letter-spacing: 2px; /*espaço entre as letras*/
+            text-align: center;
+            align-items: center;
+            flex-wrap: wrap; /*permite alinhar na próxima linha os conteúdos em tela menor*/
+            margin-left: 50px;
+        }
+
+        .content-large img {
+            width: 43em;
+            height: 29em;
+        }
+
+        .footer {
+            grid-column: 1 / span 3;
+        }
+
+        .content-small img {
+            width: 27em;
+            height: 14em;
+        }
+    </style>
+</body>
+</html>

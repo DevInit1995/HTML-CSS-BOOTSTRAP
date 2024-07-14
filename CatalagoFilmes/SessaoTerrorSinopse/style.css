@@ -69,6 +69,10 @@ form div {
   text-indent: 0px;
 }
 
+h2 {
+  text-shadow: 0.1em 0.1em 0.0em darkgray;
+}
+
 p {
   text-indent: 40px;
   text-align: justify;
@@ -123,6 +127,10 @@ ul li a:hover {
 img {
   width: 360px;
   height: 470px;
+}
+
+.shadow-imagem {
+
 }
 
 /*pagina principal-Terror-Capas*/
