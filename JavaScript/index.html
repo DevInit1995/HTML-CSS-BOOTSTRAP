@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Exercícios de lógica</h1>
+        <h3>1. Dado o tamanho da base e da altura de um retângulo, calcular a sua área e o seu
+            perímetro.</h3>
+        <form id="exercicio-1">
+            <label>Informe a base:</label>
+            <input type="text" id="base" name="base" required>
+            <br>
+            <br>
+            <label>Informe a altura:</label>
+            <input type="text" id="altura" name="altura" required>
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultadoArea"></p>
+        <p id="resultadoPerimetro"></p>
+        <br>
+        <hr>
+
+        <h3>2. Dado o tamanho do lado de um quadrado, calcular a área e o perímetro do mesmo.</h3>
+        <form id="exercicio-2">
+            <label>Informe o valor de um dos lados do quadrado: </label>
+            <input type="text" id="area" name="area" required>
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultArea"></p>
+        <p id="resultPerimetro"></p>
+        <br>
+        <hr>
+
+        <h3>3. Dado o tamanho do raio de uma circunferência, calcular a área e o perímetro da mesma.</h3>
+        <form id="exercicio-3">
+            <label>Informe o raio:</label>
+            <input type="text" id="raio" name="raio" required>
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultsArea"></p>
+        <p id="resultsPerimetro"></p>
+        <br>
+        <hr>
+
+        <h3>4. Dado os três lados de um triângulo determinar o perímetro do mesmo. </h3>
+        <form id="exercicio-4">
+            <label>Informe o lado do triangulo:</label>
+            <input type="text" id="lado" name="lado required">
+            <br>
+            <button type="submit">Calculo</button>
+        </form>
+        <p id="resultado-perimetro"></p>
+        <br>
+        <hr>
+
+        <h3>5. Ler um número inteiro e exibir o seu sucessor.</h3>
+        <form id="exercicio-5">
+            <label>Informe um valor:</label>
+            <input type="text" id="valor" name="valor" required>
+            <br>
+            <button type="submit">Sucessor</button>
+        </form>
+        <p id="resultadoOriginal"></p>
+        <p id="resultadoSucessor"></p>
+        <hr>
+        <br>
+
+        <h3>6. Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.</h3>
+        <form id="exercicio-6">
+            <label>Informe o Valor 1:</label>
+            <input type="text" id="valor1" name="valor1" required>
+            <br>
+            <br>
+            <label>Informe o Valor 2:</label>
+            <input type="text" id="valor2" name="valor2" required>
+            <br>
+           <button type="submit">Calcular</button>
+        </form>
+        <p id="quocienteDivisao"></p>
+        <p id="restoDivisao"></p>
+        <hr>
+        <br>
+
+        <h3>7. Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F - 32), 
+            leu um valor de temperatura em Fahrenheit e exibi-lo em Celsius </h3>
+        <form id="exercicio-7">
+            <label>Grau Fahrenheit:</label>
+            <input type="text" id="grau" name="grau" required>
+            <br>
+            <button type="submit">Converter</button>
+        </form>
+        <p id="grauC"></p>
+        <!--
+        5. Ler um número inteiro e exibir o seu sucessor.
+        6. Ler dois números inteiros e exibir o quociente e o resto da divisão inteira entre eles.
+        7. Solicitar a idade de uma pessoa em dias e informar na tela a idade em anos, meses e dias.
+        8. Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F – 32), leu um 
+        valor de temperatura em Fahrenheit e exibi-lo em Celsius 
+        9. Faça um algoritmo que calcule e apresente o valor do volume de uma lata de óleo, dado 
+        seu raio e sua altura.
+        10. Converter um inteiro informado menor que 32 para sua representação em binário
+        11. Faça um algoritmo para calcular a nota semestral de um aluno. A nota semestral é obtida 
+        pela média aritmética entre a nota de 2 bimestres. Cada nota de bimestre é composta por 
+        2 notas de provas.-->
+
+        <!--<h2>Calculadora de Adição</h2>
+        <h2>Calculadora Fahrenheit para Celsius</h2>
+        <form id="fahrenheitForm">
+            <input type="text" id="numero" required>
+            <br>
+            <button type="submit">Calcular</button>
+        </form>
+        <p id="resultado"></p>-->
+
+        <!--
+        <form id="additionForm">
+            <input type="number" id="num1" name="num1" required>
+            <span>+</span>
+            <input type="number" id="num2" name="num2" required>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="result"></div>-->
+    </div>
+    <script>
+        //const name = document.querySelector('.name');
+        //const btn = document.querySelector('button');
+        /*function changeColor(){
+            name.style.color = "blue";
+        }*/
+        /*btn.addEventListener("click", changeColor);
+        function changeColor() {
+            name.style.color = "blue";
+        }
+
+        btn.addEventListener("click", changeColor1);
+        function changeColor1() {
+            name.style.color = "yellow";
+        }
+
+        btn.addEventListener("click", changeColor2);
+        function changeColor2() {
+            name.style.color = "green";
+        }
+
+        btn.addEventListener("click", changeColor3);
+        function changeColor3() {
+            name.style.color = "pink";
+        }*/
+
+        //btn.addEventListener("click", exibeImagem);
+        /*function exibeImagem(){
+            
+        }*/
+
+        /*8. Dado que a fórmula para conversão de Fahrenheit para Celsius é C = 5/9 (F – 32), leu um
+        valor de temperatura em Fahrenheit e exibi-lo em Celsius
+        function conversor(){
+            var valor;
+            var valor = prompt('Informar a temperatura e °C: ');
+            var converte = valor * ((9 / 5) + 32);
+            alert(converte)
+        }*/
+        //conversor();
+
+        /*document.getElementById('additionForm').addEventListener('submit', function(event){
+            event.preventDefault();
+
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            var result = num1 = num2;
+
+            document.getElementById('result').innerText = 'Resultado: ' + result;
+        })*/
+
+        /*document.getElementById('fahrenheitForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var numero = parseFloat(document.getElementById('numero').value);
+
+            var resultado = (numero - 32) * ((5 / 9));
+
+            document.getElementById('resultado').innerText = 'Resultado: ' + resultado.toFixed(4);
+        })*/
+
+        /*document.getElementById('exercicio-1').addEventListener('submit', function (event){
+            event.preventDefault();
+            debugger;
+            var base = parseFloat(document.getElementById('base').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+            //area
+            var calculoB = (base * altura);
+            //perimetro
+            var calculoP = (base + altura) * 2;
+
+            document.getElementById('resultadoArea').innerText = 'Área: ' + calculoB;
+            document.getElementById('resultadoPerimetro').innerText = 'Perímetro: ' + calculoP;
+        })*/
+
+
+        /*document.getElementById('exercicio-2').addEventListener('submit', function (event){
+            event.preventDefault();
+            debugger;
+            var area = parseFloat(document.getElementById('area').value);
+            var calculoArea = area * area;
+            var calculoPerimetro = area * 4;
+
+            document.getElementById('resultArea').innerText = 'Área: ' + calculoArea;
+            document.getElementById('resultPerimetro').innerText = 'Perimetro: ' + calculoPerimetro;
+        })*/
+
+        /*document.getElementById('exercicio-3').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var raio = parseFloat(document.getElementById('raio').value);
+            var calculoArea = (raio * raio) * 3.13;
+            var calculoPerimetro = 2 * (raio * 3.13);
+
+            document.getElementById('resultsArea').innerText = 'Área: ' + calculoArea;
+            document.getElementById('resultsPerimetro').innerText = 'Perímetro: ' + calculoPerimetro;
+        })*/
+
+        /*document.getElementById('exercicio-4').addEventListener('submit', function (event){
+            event.preventDefault();
+            var lado = parseFloat(document.getElementById('lado').value);
+            var calculosPerimetro = (lado * 3);
+
+            document.getElementById('resultado-perimetro').innerText = 'Perímetro: ' + calculosPerimetro;
+        });*/
+
+        /*document.getElementById('exercicio-5').addEventListener('submit', function (event){
+            event.preventDefault();
+            var valor = parseFloat(document.getElementById('valor').value);
+            var calculoSucessor = valor + 1;
+
+            document.getElementById('resultadoOriginal').innerText = "Valor Informado: " + valor;
+            document.getElementById('resultadoSucessor').innerText = 'Valor Sucessor: ' + calculoSucessor;
+        });*/
+        
+        /*document.getElementById('exercicio-6').addEventListener('submit', function(event){
+            event.preventDefault();
+            var valor1 = parseFloat(document.getElementById('valor1').value);
+            var valor2 = parseFloat(document.getElementById('valor2').value);
+
+            var quociente = (valor1 / valor2);
+            var resto = (valor1 % valor2);
+
+            document.getElementById('quocienteDivisao').innerText = "Quociente: " + quociente;
+            document.getElementById('restoDivisao').innerText = "Resto: " + resto;
+        });*/
+
+        document.getElementById('exercicio-7').addEventListener('submit', function(event){
+            event.preventDefault();
+            var grau = parseFloat(document.getElementById('grau').value);
+            var grauConversao = (grau - 32) / 1.8;
+            document.getElementById('grauC').innerText = "Grau em Celcius: " + grauConversao.toFixed(4);
+        });
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
